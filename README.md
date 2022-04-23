@@ -1,6 +1,7 @@
 - 98% OSS
-- 1% free-as-in-beer closed source software
-- 1% in-browser tools
+- 1% free-as-in-beer closed source software and some notable payware
+- 1% in-browser tools & SaaS
+- Review the license for each tool, some are free for non-commercial use only
 - Please don't submit to Reddit, HN, or post this on Twitter. Share, but share with close friends!
 
 ---
@@ -13,15 +14,13 @@
 
 - [Learning Resources](#learning-resources)
 
-- [Complete notes from the book Software Engineering at Google: Lessons Learned from Programming Over Time](https://www.seagnotes.com) by Josh
-
 ---
 
 # Tools by Category
 
 - [X](#asset-management) Asset Management
-- [X](#aws-tools-and-resources) AWS Tools and Resources
-- [X](#azure-tools-and-m365-resources) Azure and M365 Tools and Resources
+- [X](#aws-tools-and-learning-resources) AWS Tools and Learning Resources
+- [X](#azure-and-m365-tools-and-learning-resources) Azure and M365 Tools and Learning Resources
 - [X](#backups) Backups
 - [X](#cloud-file-sync-and-sharing) Cloud File Sync and Sharing
 - [X](#collaboration-tools) Collaboration Tools
@@ -31,13 +30,13 @@
 - [X](#enterprise-architecture) Enterprise Architecture
 - [X](#editors) Editors
 - [X](#git-tools) Git Tools
-- [X](#google-cloud-tools-and-resources) Google Cloud Tools and Resources
+- [X](#google-cloud-tools-and-learning-resources) Google Cloud Tools and Learning Resources
 - [X](#graphics-stuff) Graphics Stuff
 - [X](#high-availability-clustering-tools) High Availability Clustering Tools
 - [X](#hpc-tools) HPC Tools
 - [X](#infrastructure-as-code-tools) Infrastructure as Code Tools
 - [X](#kubernetes) Kubernetes
-- [X](#live-cd-tools) Live CD Tools
+- [X](#live-cd-and-usb-tools) Live CD and USB Tools
 - [X](#logging) Logging
 - [X](#metrics-and-time-series-data) Metrics and Time Series Data
 - [X](#monitoring-and-alerting) Monitoring and Alerting
@@ -136,7 +135,7 @@
 
 ---
 
-## AWS Tools and Resources
+## AWS Tools and Learning Resources
 
 - [Action Hero](https://github.com/princespaghetti/actionhero) - Uses an AWS SDK feature known as Client Side Monitoring to help you create least privilege IAM Policies for AWS -- `Golang`
 - [Amazon Builder's Library](https://aws.amazon.com/builders-library) - Amazon shares their learnings -- `articles`
@@ -226,6 +225,7 @@
 - [ec2.shop](https://ec2.shop/) - ec2 price checker, supports curl -- `various lang`
 - [eksctl](https://eksctl.io/) - CLI tool for creating and managing clusters on AWS EKS -- `Golang`
 - [EKS Best Practices](https://aws.github.io/aws-eks-best-practices/) - By Amazon, contributions welcome -- `collection`
+- [EKS Blueprints](https://aws.amazon.com/blogs/containers/bootstrapping-clusters-with-eks-blueprints/) - For AWS CDK or Terraform, includes associated services (Prometheus, ArgoCD, etc), by Amazon -- `various lang`
 - [EKS Boilerplate](https://github.com/maddevsio/aws-eks-base) - IaC boilerplate in mostly Terraform -- `various lang`
 - [EKS Distro](https://distro.eks.amazonaws.com/) - Use me for multi-cloud EKS -- `various lang`
 - [Everything AWS](https://app.polymersearch.com/discover/aws) - The best way to browse the 6k+ AWS git repos -- `collection`
@@ -247,6 +247,7 @@
 - [onelogin-python-aws-assume-role](https://github.com/onelogin/onelogin-python-aws-assume-role) - Assume an AWS Role and get temporary credentials using Onelogin -- `Python pip`
 - [Overview of Amazon Web Services](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/introduction.html) - Amazon's official guide, a few paragraphs for each -- `collection`
 - [ParallelCluster](https://aws.amazon.com/hpc/parallelcluster/) - AWS supported Open Source cluster management tool to deploy and manage HPC clusters in the AWS cloud -- `Python`
+- [Plumber](https://github.com/batchcorp/plumber) - Read and write messages to Kafka, Kinesis Streams, SNS, SQS, and many more -- `Golang`
 - [PMapper](https://github.com/nccgroup/PMapper) - Models the different IAM Users and Roles in an account as a directed graph, which enables checks for privilege escalation and for alternate paths an attacker could take to gain access to a resource or action in AWS -- `Python`
 - [Production Readiness Checklist](https://www.gruntwork.io/devops-checklist/) - Excellent checklist for pre-go-live, AWS-centric but great general advice -- `collection`
 - [Prowler](https://github.com/toniblyx/prowler) - For AWS account security assessment and hardening, based on aws-cli commands -- `shell`
@@ -269,6 +270,7 @@
 - [SSM Helpers](https://github.com/disneystreaming/ssm-helpers) - Interactive shell with an instance via AWS Systems Manager Session Manager and more -- `Golang`
 - [StackMaster](https://github.com/envato/stack_master) - Provides a ton of info pre-CloudFormation run so that you know exactly what will change -- `Ruby gem`
 - [StarCluster](http://star.mit.edu/cluster/) - Toolkit for using AWS for high performance computing (HPC), by MIT -- `Python`
+- [StarWind V2V Converter / P2V Migrator](https://www.starwindsoftware.com/starwind-v2v-converter) - Excellent tool for P2C and C2C VM migrations -- `closed source`
 - [Steampipe Mod - AWS Compliance](https://hub.steampipe.io/mods/turbot/aws_compliance) - Run individual configuration, compliance and security controls or full compliance benchmarks for AWS Foundational Security Best Practices, CIS, GDPR, HIPAA, NIST 800-53, NIST CSF, PCI DSS, RBI Cyber Security Framework across all your AWS accounts -- `Golang`
 - [Stout](https://github.com/cloudflare/Stout) - Easy way to reliably upload a static website to S3, capable of configuring CloudFront and Route 53 -- `Golang`
 - [Superwerker](https://aws.amazon.com/quickstart/architecture/superwerker/) - Open-source solution that lets you quickly set up an AWS Cloud environment following best practices for security and efficiency, built by AWS Advanced Partners -- `various lang`
@@ -282,19 +284,20 @@
 
 ---
 
-## Azure and M365 Tools and Resources
-
-Includes Office 365 & O365 and Azure Active Directory & Azure AD
+## Azure and M365 Tools and Learning Resources
 
 - [365Inspect](https://github.com/soteria-security/365Inspect) - Automates the security assessment of Microsoft Office 365 environments -- `PowerShell`
+- [Active Roles](https://www.oneidentity.com/products/active-roles/) - Restore deleted objects, track change history, automation, and more for your Active Directory, supports Azure, payware -- `closed source`
 - [AdminDroid](https://admindroid.com/) - O365 reporting, auditing, analytics, and insights, SaaS -- `closed-source`
 - [AIPAS (Azure IP Address Solution)](https://github.com/stefanstranger/AIPAS) - IPAM for Azure, used to support the deployment of Enterprise Scale Landing Zones and their VNETs -- `PowerShell`
+- [App Service Acmebot](https://github.com/shibayan/appservice-acmebot) - Application that automates the issuance and renewal of ACME SSL/TLS certificates for Azure App Services -- `C Sharp`
 - [ARM Quickstart Templates](https://azure.microsoft.com/en-us/resources/templates/) - 1000+ ARM templates, community-driven -- `collection`
 - [ARM Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools) - Language support, resource snippets, and resource auto-completion -- `various lang`
 - [ARM Viewer for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=bencoleman.armview) - Graphical preview of ARM templates -- `various lang`
 - [Audit Email Deletion in Office 365](https://github.com/admindroid-community/powershell-scripts/blob/master/Audit%20Email%20Deletion%20in%20Office%20365/AuditDeletedEmails.ps1) - Exports deleted emails audit records to CSV, requires mailbox auditing to be enabled -- `PowerShell`
 - [Audit File Deletion in Microsoft 365](https://o365reports.com/2021/12/15/find-out-who-deleted-files-from-office-365/) - Find out who deleted files from SharePoint Online, OneDrive, and Office 365 -- `PowerShell`
 - [Awesome Azure Architecture](https://github.com/lukemurraynz/awesome-azure-architecture) - Hot -- `collection`
+- [Awesome Azure Policy](https://github.com/globalbao/awesome-azure-policy) - Huge collection -- `collection`
 - [Awesome Cloud Security](https://github.com/4ndersonLin/awesome-cloud-security) - A list -- `collection`
 - [Azucar](https://github.com/nccgroup/azucar) - Multi-threaded plugin-based tool to help you assess the security of your Azure Cloud environment -- `PowerShell`
 - [AzCopy](https://github.com/Azure/azure-storage-azcopy) - CLI to copy data to and from containers and file shares in Azure Storage accounts -- `Golang`
@@ -302,8 +305,12 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [AZSentinel](https://github.com/wortell/AZSentinel) - Unofficial PowerShell module for Azure Sentinel because there is no documented API to configure Sentinel -- `PowerShell`
 - [AzureHunter](https://github.com/darkquasar/AzureHunter) - Cloud forensics Powershell module to run threat hunting playbooks on data from Azure and O365 -- `PowerShell`
 - [AzureServces.IO](https://azureservices.io/) - A visual representation of Azure services. Services interconnections, reference to availability by regions and other quick references -- `in-browser`
+- [Azure-PlantUML](https://github.com/plantuml-stdlib/Azure-PlantUML) - PlantUML sprites, macros and stereotypes for creating PlantUML diagrams with Azure components -- `collection`
 - [Azure Active Directory Best Practices](https://duckduckgo.com/?q=azure+ad+best+practices+site%253Adocs.microsoft.com) - Covers all areas (roles, B2C, applications, and more) -- `collection`
 - [Azure AD - Attack and Defense Playbook](https://github.com/Cloud-Architekt/AzureAD-Attack-Defense) - Collection of various common attack scenarios on Azure Active Directory and how they can be mitigated or detected -- `collection`
+- [Azure AD Connect Sync](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-sync-whatis) - Takes care of all the operations that are related to synchronize identity data between your on-premises environment and Azure AD, the successor of DirSync, Azure AD Sync, and Forefront Identity Manager -- `closed source`
+- [Azure AD Password Protection for Windows Server Active Directory](https://www.microsoft.com/en-us/download/details.aspx?id=57071) - Protect all password set and reset operations in Azure and Windows Server Active Directory by ensuring they do not contain weak or leaked password strings, official tool -- `closed source`
+- [Azure AD Workload Identity for Kubernetes](https://azure.github.io/azure-workload-identity/docs/) - Replacement for Azure AD Pod Identity -- `article`
 - [Azure Arc](https://techcommunity.microsoft.com/t5/itops-talk-blog/azure-arc-for-cloud-solutions-architects/ba-p/2521928?WT.mc_id=modinfra-23500-thmaure) - Multi-cloud + on-prem control plane to centralize hybrid management, magical -- `cloud`
 - [Azure Arc Jumpstart](https://azurearcjumpstart.io/) - Learn Azure Arc in no time -- `tutorial`
 - [Azure Architecture Center](https://docs.microsoft.com/en-us/azure/architecture/) - Guidance for architecting solutions on Azure using established patterns and practices -- `collection`
@@ -311,17 +318,23 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Azure Cloud Adoption Framework](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/) - Collection of documentation, implementation guidance, best practices, and tools that are proven guidance from Microsoft designed to accelerate your cloud adoption journey -- `collection`
 - [Azure Cloud Adoption Framework - Enterprise-scale Architecture](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/enterprise-scale/architecture) - An excellent reference pattern -- `article`
 - [Azure Cloud Guardrails](https://github.com/salesforce/cloud-guardrails) - Rapidly cherry-pick cloud security guardrails by generating Terraform files that create Azure Policy Initiatives, by Salesforce -- `Python pip`
+- [Azure Cloud Shell](https://github.com/Azure/CloudShell) - Container image for Azure Cloud Shell (in-browser Azure CLI, Azure PowerShell, Ansible, Terraform, Chef, Puppet Bolt, kubectl, and many more) -- `various lang`
 - [Azure Databricks Best Practices](https://github.com/Azure/AzureDatabricksBestPractices/blob/master/toc.md) - By Microsoft, based off customer and technical SME feedback -- `article`
 - [Azure Data Security](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/data-security) - More topics in the left sidebar -- `article`
+- [Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio) - Cross-platform database tool for data professionals who use on-premises and cloud data platforms on Windows, macOS, and Linux -- `closed source`
 - [Azure DevOps Labs](https://azuredevopslabs.com/) - Self-paced -- `training`
 - [Azure DevOps: Recommended Practices for Secure Pipelines](https://github.com/mpeder/azdevopssecurity) - Great collection -- `collection`
 - [Azure Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local) - Develop and test your functions on your local computer from the command prompt or terminal -- `various lang`
 - [Azure Functions Security](https://github.com/damienbod/AzureFunctionsSecurity) - Repo with a collection of resources -- `collection`
+- [Azure Functions University](https://github.com/marcduiker/azure-functions-university) - Videos and hands-on -- `tutorial`
 - [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) - Granular insights on your technical Azure Governance implementation -- `PowerShell`
+- [Azure Icon Collection](https://code.benco.io/icon-collection/) - Various technical icons, glyphs, logos and other imagery all in SVG format -- `collection`
 - [Azure in Bullet Points](https://github.com/undergroundwires/Azure-in-bullet-points) - Super fast way to learn Azure and prep for certifications at the same time -- `collection`
 - [Azure Kubernetes Service (AKS) Baseline Cluster](https://github.com/mspnp/aks-secure-baseline) - Reference implementation demonstrates the recommended starting (baseline) infrastructure architecture for a general purpose AKS cluster, by Microsoft -- `various lang`
 - [Azure Landing Zone](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) - Pre-made environments that follow best practices, quick to spin up -- `article`
 - [Azure Master Class](https://www.youtube.com/playlist?list=PLlVtbbG169nGccbp8VSpAozu3w9xSQJoY) - Hands on free training by John Savill -- `training`
+- [Azure Mission-Critical](https://github.com/Azure/Mission-Critical) - Official Microsoft project that provides a prescriptive architectural approach to building highly-reliable cloud-native applications on Microsoft Azure for mission-critical workloads -- `collection`
+- [Azure Monitor Workbook Templates](https://github.com/microsoft/Application-Insights-Workbooks) - Templates for Azure Monitor Workbooks, official -- `collection`
 - [Azure Official Terraform Modules](https://github.com/orgs/Azure/repositories?q=terraform-azurerm) - By Microsoft -- `collection`
 - [Azure Policy Samples](https://github.com/Azure/azure-policy) - Samples of Azure Policies that can be used as reference for creating and assigning policies -- `collection`
 - [Azure Portal Desktop App](https://portal.azure.com/App/Download) - Faster than a browser, full Cloud Shell, fast search -- `various lang`
@@ -331,18 +344,24 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Azure Security Benchmark (ASB)](https://docs.microsoft.com/en-us/security/benchmark/azure/overview) - Azure security best practices by Microsoft, currently v3 -- `collection`
 - [Azure Security Best Practices Checklist](https://nuvento.com/blog/top-100-azure-security-best-practices-checklist/) - A list of 100 items for Azure -- `collection`
 - [Azure Security Technical Capabilities](https://docs.microsoft.com/en-us/azure/security/fundamentals/technical-capabilities) - An introduction to all important / core services of Azure -- `article`
+- [Azure Stencils for Visio](https://github.com/David-Summers/Azure-Design) - Extensive and updated -- `collection`
 - [Azure Storage Encryption for Data at Rest](https://docs.microsoft.com/en-us/azure/storage/common/storage-service-encryption) - Name -- `article`
+- [Azure Terrafy](https://github.com/azure/aztfy) - Bring existing Azure resources under Terraform control (eg: export current Azure config as HCL), official tool from Microsoft -- `various lang`
 - [Azure Tips and Tricks](https://microsoft.github.io/AzureTipsAndTricks/) - 100s of tips from community and real world scenarios, please contribute -- `collection`
 - [Azure VM Comparison](https://azureprice.net/) - Find and compare Azure Virtual Machines specs and pricing on one page across different tiers, payment types, and regions -- `in-browser`
 - [Azure Well-Architected Framework](https://docs.microsoft.com/en-us/azure/architecture/framework/) - Guiding tenets that can be used to improve the quality of a cloud workload -- `article`
+- [Azurite](https://github.com/FSecureLABS/Azurite) - Enumeration and reconnaissance activities in the Microsoft Azure Cloud -- `various lang`
 - [AzViz](https://github.com/PrateekKumarSingh/AzViz) - Automatically generate Azure resource topology diagrams by just typing a PowerShell cmdlet and passing the name of one or more Azure Resource Group(s) -- `PowerShell`
 - [Az Predictor](https://techcommunity.microsoft.com/t5/azure-tools-blog/announcing-az-predictor/ba-p/1873104?WT.mc_id=modinfra-0000-thmaure) - Intelligent command completion module for Azure Powershell, not just from your history -- `neat`
+- [Batch Explorer](https://azure.github.io/BatchExplorer/) - Client tool to help create, debug and monitor Azure Batch Applications -- `Typescript`
 - [BloodHound](https://github.com/BloodHoundAD/BloodHound) - Easily identify highly complex attack paths that would otherwise be impossible to quickly identify. Defenders can use BloodHound to identify and eliminate those same attack paths -- `various lang`
 - [blue-teaming-with-kql](https://github.com/ashwin-patil/blue-teaming-with-kql) - Cheat sheets, code snippits, and more, very cool -- `collection`
 - [Brainboard](https://www.brainboard.co/) - Visually build & manage cloud infrastructures, outputs Terraform code from the diagram, paid, worth it -- `SaaS`
 - [CIS Microsoft 365 Foundations Benchmark](https://www.cisecurity.org/benchmark/microsoft_office) - CIS controls -- `article`
+- [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365/) - Official from Microsoft -- `Typescript`
 - [CloudFrontier](https://github.com/riskprofiler/CloudFrontier) - Monitor the internet attack surface of various public cloud environments. Currently supports AWS, GCP, Azure, DigitalOcean and Oracle Cloud -- `Python`
 - [CloudGraph](https://www.cloudgraph.dev/) - GraphQL API and Cloud Security Posture Management (CSPM) tool for AWS, Azure, GCP, and K8s (inventory & compliance) -- `various lang`
+- [CloudLAPS Community Edition](https://msendpointmgr.com/cloudlaps/) - End-to-end local administrator password solution (LAPS) for cloud managed devices (Azure AD joined devices), includes a portal / GUI -- `PowerShell` `Bicep`
 - [Cloudockit](https://www.cloudockit.com/) - Automatically generates diagrams and technical documentation, visualize and document your cloud and on-premises environments, in just a few clicks -- `not free but very good`
 - [CloudSploit](https://github.com/aquasecurity/cloudsploit) - Scans for risks, multi-cloud -- `various lang`
 - [Cloud Comparison - AWS and Azure services to Google Cloud](https://cloud.google.com/free/docs/aws-azure-gcp-service-comparison) - Cheatsheet for all three clouds -- `collection`
@@ -357,21 +376,31 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Get PIM Role Assignment Status](https://thesysadminchannel.com/get-pim-role-assignment-status-for-azure-ad-using-powershell/) - Correctly report PIM roles in Azure -- `PowerShell`
 - [Hawk](https://github.com/T0pCyber/hawk) - Powershell Based tool for gathering information related to O365 intrusions and potential breaches -- `PowerShell`
 - [hibp-adfs](https://github.com/nickadam/hibp-adfs) - Gets the SHA1 hash of the submitted ADFS password and checks it against Have I Been Pwned -- `JavaScript`
+- [How to Detect Azure Active Directory Backdoors: Identity Federation](https://www.inversecos.com/2021/11/how-to-detect-azure-active-directory.html) - For Azure AD -- `article`
+- [Identity Management for Multitenant Applications in Microsoft Azure](https://github.com/mspnp/multitenant-saas-guidance) - By Microsoft -- `article`
 - [Introduction to Azure Security](https://docs.microsoft.com/en-us/azure/security/fundamentals/overview) - Name -- `article`
+- [Key Vault Acmebot](https://github.com/shibayan/keyvault-acmebot) - Automates the issuance and renewal of ACME SSL/TLS certificates stored in Azure Key Vault -- `various lang`
+- [Mandiant Azure AD Investigator](https://github.com/mandiant/Mandiant-Azure-AD-Investigator) - Module for detecting artifacts that may be indicators of UNC2452 and other threat actor activity including domain federation, service principals, applications, and more -- `PowerShell`
 - [MicroBurst](https://github.com/NetSPI/MicroBurst) - A PowerShell toolkit for attacking Azure -- `Powershell`
+- [Microsoft 365 Business Premium Partner Playbook and Readiness Series](https://cloudpartners.transform.microsoft.com/m365bp-partner-playbook) - Best practices, download the doc named "IT checklist for securing work from anywhere using Microsoft 365 Business Premium" -- `article`
+- [Microsoft 365 Scripts](https://m365scripts.com/) - Scripts for Exchange Online, Microsoft 365, Microsoft Teams, SharePoint Online, and more -- `PowerShell`
 - [Microsoft Cloud Workshop (MCW)](https://microsoftcloudworkshop.com/) - Customer-ready content to host workshops that foster cloud learning and adoption, by Microsoft -- `training`
 - [Microsoft Learn](https://docs.microsoft.com/en-us/learn/) - Includes many Azure courses -- `collection`
 - [Microsoft Secure Score](https://docs.microsoft.com/en-us/microsoft-365/security/defender/microsoft-secure-score?view=o365-worldwide) - Benchmarks that cover Azure AD, Microsoft 365 / O365, Teams, and more -- `article`
 - [Microsoft Sentinel and Microsoft 365 Defender Repository](https://github.com/Azure/Azure-Sentinel) - Contains out of the box detections, exploration queries, hunting queries, workbooks, playbooks and much more to help you get ramped up -- `collection`
 - [Microsoft Sentinel 4 SecOps](https://github.com/eshlomo1/Microsoft-Sentinel-4-SecOps) - Microsoft Sentinel content with KQL queries for exploration, hunting, and other activities -- `collection`
+- [o365recon](https://github.com/nyxgeek/o365recon) - Script to retrieve information via O365 and AzureAD, requires a valid credential -- `PowerShell`
 - [O365UserLoginHistory](https://o365reports.com/2019/12/23/export-office-365-users-logon-history-report/) - Way better than built-in tools -- `PowerShell`
 - [Office365 Audit Log Collector](https://ddbnl.github.io/office365-audit-log-collector/) - Collect Office365, Azure and DLP audit logs, optionally filter them, then send them to one or more outputs such as file, PRTG, Azure Log Analytics or Graylog -- `Python`
-- [Office 365 Recommended Configuration Analyzer (ORCA)](https://github.com/cammurray/orca) - Highlights known configuration issues and improvements which can impact your experience with Microsoft Defender for Office 365
+- [Office 365 Recommended Configuration Analyzer (ORCA)](https://github.com/cammurray/orca) - Highlights known configuration issues and improvements which can impact your experience with Microsoft Defender for Office 365 -- `PowerShell`
 - [Office 365 Reporting PowerShell Scripts](https://github.com/admindroid-community/powershell-scripts) - By the AdminDroid community-- `collection`
+- [Plumber](https://github.com/batchcorp/plumber) - Read and write messages to Kafka, Azure Service Bus, Azure Event Hub, and many more -- `Golang`
 - [PowerShell Gallery](https://www.powershellgallery.com/) - The central repository for sharing and acquiring PowerShell code including PowerShell modules, scripts, and DSC resources -- `collection`
 - [PowerShell Koans](https://github.com/vexx32/PSKoans) - Learn the PowerShell language through Pester unit testing -- `PowerShell`
+- [PowerShell Language Support for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) - VSCode plugin, both write and test inside VSCode, highly recommended -- `various lang`
 - [PowerShell Universal](https://ironmansoftware.com/powershell-universal) - Single pane of glass for managing and delegating access to your automation environment, similar to Rundeck, payware -- `closed source`
 - [PowerZure](https://github.com/hausec/PowerZure) - PowerShell framework to assess Azure security -- `PowerShell`
+- [Promitor](https://promitor.io/) - Azure Monitor scraper which makes the metrics available through a scraping endpoint for Prometheus or push to a StatsD server -- `C Sharp`
 - [Recommended settings for Exchange Online Protection (EOP) and Microsoft Defender for Office 365](https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365?view=o365-worldwide) - Best practices -- `article`
 - [RobustCloudCommand](https://github.com/Canthv0/RobustCloudCommand) - Wrapper script that tries to ensure that a script block successfully finishes execution in O365 against a large object count -- `PowerShell`
 - [Security Stack Mappings](https://github.com/center-for-threat-informed-defense/security-stack-mappings) - Maps Azure and AWS product security controls to MITRE ATT&CK -- `collection`
@@ -381,11 +410,17 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Service Bus Explorer](https://github.com/paolosalvatori/ServiceBusExplorer) - Interact with Azure Service Bus for testing, debugging, etc -- `Windows`
 - [Service Operator](https://github.com/Azure/azure-service-operator) - Helps you provision Azure resources and connect your applications to them from within Kubernetes and kubectl -- `Golang`
 - [SkyArk](https://github.com/cyberark/SkyArk) - Defensive tool to find admin accounts to mitigate the threat of cloud shadow admins -- `PowerShell`
+- [SQL Index Manager](https://github.com/sergiisyrovatchenko/SQLIndexManager) - Free GUI Tool for Index Maintenance on SQL Server and Azure -- `various lang`
+- [SQL Monitor](https://www.red-gate.com/products/dba/sql-monitor/) - Probably the best SQL Server monitoring platform, supports Azure, by Redgate, payware -- `various lang`
+- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) - Integrated environment to configure, monitor, and administer instances of SQL Server and databases including Azure -- `closed source`
+- [SQL Server Profiler](https://docs.microsoft.com/en-us/sql/tools/sql-server-profiler/sql-server-profiler) - Profile SQL Server queries, also supports Azure -- `closed source`
+- [StarWind V2V Converter / P2V Migrator](https://www.starwindsoftware.com/starwind-v2v-converter) - Excellent tool for P2C and C2C VM migrations -- `closed source`
 - [StigRepo](https://github.com/microsoft/StigRepo) - Automate and customize configurations that are compliant with Security Technical Implementation Guides (STIGs) owned and released by the Defense Information Systems Agency (DISA) -- `PowerShell`
 - [Tenant Security (AzTS)](https://github.com/azsk/AzTS-docs) - Used to obtain visibility to cloud subscriptions and resource configuration across multiple subscriptions in an enterprise environment, official tool by Microsoft -- `various lang`
-- [Sentinel ATT&CK](https://github.com/BlueTeamLabs/sentinel-attack) - Leverages Sysmon and MITRE ATT&CK on Azure Sentinel -- `various lang`
 - [Steampipe Mod - Azure Compliance](https://hub.steampipe.io/mods/turbot/azure_compliance) - Run individual configuration, compliance and security controls or full CIS, HIPAA HITRUST and NIST compliance benchmarks across all your Azure subscriptions -- `Golang`
 - [StormSpotter](https://github.com/Azure/Stormspotter) - Creates an “attack graph” of the resources in an Azure subscription. It enables red teams and pentesters to visualize the attack surface and pivot opportunities within a tenant -- `Python`
+- [Vajra](https://github.com/TROUBLE-1/Vajra) - GUI with multiple techniques for attacking and enumerating in target's Azure environment -- `various lang`
+- [Veeam Backup and Replication Community Edition](https://www.veeam.com/virtual-machine-backup-solution-free.html) - Great for lift/shift to Azure from any platform -- `closed source`
 - [VSTeam](https://github.com/MethodsAndPractices/vsteam) - Unofficial PowerShell module to automate Azure DevOps -- `PowerShell`
 
 ---
@@ -420,12 +455,12 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [SnapRAID](https://www.snapraid.it/) - Backup program that also stores RAID parity information -- `C`
 - [Unison](https://www.cis.upenn.edu/~bcpierce/unison/) - Multi-OS file sync tool, syncs from both sides, no master -- `OS X`
 - [UrBackup](https://www.urbackup.org/) - Supports Windows, has a web interface -- `Windows` `C++`
+- [User Profile Wizard (profwiz)](https://www.forensit.com/domain-migration.html) - Migrate Windows user profiles to retain all settings, great for domain migrations including to Azure AD, worth it -- `payware`
+- [Veeam Backup and Replication Community Edition](https://www.veeam.com/virtual-machine-backup-solution-free.html) - Great for P2V, V2V lift/shift to Azure, AWS, Google, Hyper-V and VMware -- `closed source`
 
 ---
 
 ## Cloud File Sync and Sharing
-
-> Sync files to and share from public or private file stores (think Dropbox, Google Drive, etc) - see also [Backups](#backups)
 
 - [Drive](https://github.com/odeke-em/drive) - Push or pull files to Google Drive via the command line -- `Golang`
 - [git-annex Assistant](https://git-annex.branchable.com/assistant/) - Sync folder(s) to any device (NAS, mobile, thumb, cloud, etc) via git -- `C` `OS X` `mobile`
@@ -457,12 +492,12 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Haste / hastebin](https://github.com/seejohnrun/haste-server) - Open source pastebin alternative for sharing code, can be installed locally / on-site -- `JavaScript`
 - [Hubot](https://hubot.github.com/) - Chat bot that can do deploys, look up images, integrate with Google Maps, and tons of other stuff -- `CoffeeScript`
 - [Isso](https://posativ.org/isso/) - A commenting server similar to Disqus -- `JavaScript`
-- [JXplorer](http://jxplorer.org/) - Cross platform LDAP browser and editor -- `Java`
+- [Jitsi](https://jitsi.org/) - OSS Zoom alternative that allows you to create highly secure videoconferencing solutions, you can make it P2P as well - `various lang`
 - [Kanboard](https://kanboard.org/) - Simple Kanban board -- `PHP`
 - [Kolab](https://kolab.org/) - Unified communication and collaboration system -- `PHP`
-- [LDAP Account Manager (LAM)](https://www.ldap-account-manager.org/lamcms/) - Full featured LDAP management GUI, can manage almost anything -- `PHP`
 - [Mattermost](https://about.mattermost.com/download/) - OSS Slack alternative -- `Golang` `JavaScript`
 - [Mailtrain](https://github.com/Mailtrain-org/mailtrain) - Self hosted news letter e-mail app, similar to Mailchimp -- `JavaScript`
+- [ONLYOFFICE](https://github.com/ONLYOFFICE/) - Self-hosted web-based Office lookalike and compatible productivity suite -- `various lang`
 - [OpenProject](https://www.openproject.org) - Web-based project management system built on Ruby on Rails -- `Ruby`
 - [osTicket](https://osticket.com/) - Routes inquiries created via email, web-forms and phone calls into a web-based customer support platform -- `PHP`
 - [OTRS](https://www.otrs.com/) - Open source help desk software -- `perl`
@@ -642,7 +677,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [nsq](https://nsq.io/) - Realtime distributed messaging platform / message queue -- `Golang`
 - [OpenStack](https://www.openstack.org/) - Private cloud -- `Python`
 - [Pinpoint](https://github.com/naver/pinpoint) - Application Performance Monitoring (APM) for distributed systems, based on Dapper -- `Java`
-- [Plumber](https://github.com/batchcorp/plumber) - Read and write messages to Kafka, RabbitMQ, Google Cloud PubSub, and more -- `Golang`
+- [Plumber](https://github.com/batchcorp/plumber) - Read and write messages to Kafka, RabbitMQ, Google Cloud PubSub, and many more -- `Golang`
 - [redis-cell](https://github.com/brandur/redis-cell) - Redis module that provides rate limiting in Redis as a single command using GCRA -- `C`
 - [Redisson](https://github.com/mrniko/redisson) - Distributed and scalable Java data structures on top of Redis -- `Java`
 - [Redpanda](https://vectorized.io/) - Kafka compatible event streaming platform no Zookeeper, no JVM, and no code changes required -- `C++`
@@ -670,6 +705,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [MacVim](https://github.com/macvim-dev/macvim) - Has far more features than the vim that's included with the OS -- `C`
 - [Nuclide](https://nuclide.io/) - Collection of packages for Atom to provide IDE-like functionality for a variety of programming languages and technologies, by Facebook -- `JavaScript`
 - [Notepad++](https://notepad-plus-plus.org/) - Killer GPL'ed text editor for Windows -- `C++`
+- [PDF-XChange Editor](https://www.tracker-software.com/product/pdf-xchange-editor) - Much cheaper and almost feature-parity with Adobe DC Pro, payware -- `Windows`
 - [percol](https://github.com/mooz/percol) - Interactive grep (search) tool -- `Python`
 - [Powerline](https://github.com/powerline/powerline) - Provides various statues on the bottom of your session, flexible -- `Python`
 - [Textmate](https://macromates.com/) - GUI text editor for OS X -- `C++`
@@ -725,19 +761,22 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [hub](https://hub.github.com/) - Official CLI for GitHub -- `Golang`
 - [myrepos](https://myrepos.branchable.com/) - Flexible tool for managing many repos -- `perl`
 - [pre-commit Framework](https://pre-commit.com/) - A framework for managing and maintaining multi-language pre-commit hooks -- `Python`
+- [ripgrep](https://github.com/BurntSushi/ripgrep) - Fastest search tool that recursively searches the current directory for a regex pattern and respects your gitignore -- `Rust`
 - [Signing](https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work) - Sign commits and/or tags using GPG keys to verify the identity of the commiter -- `built-in`
 
 ---
 
-## Google Cloud Tools and Resources
+## Google Cloud Tools and Learning Resources
 
 - [A giant list of Google Cloud resources](https://cloud.google.com/blog/topics/developers-practitioners/giant-list-google-cloud-resources) - From Google -- `collection`
 - [Application Layer Transport Security](https://cloud.google.com/security/encryption-in-transit/application-layer-transport-security/) - Use mutual TLS to secure RPC calls between entities, designed with containers and microservices in mind -- `article`
 - [Architecture Center](https://cloud.google.com/architecture) - Reference architectures, diagrams, design patterns, guidance, and best practices for building or migrating your workloads on Google Cloud -- `collection`
 - [Awesome Cloud Security](https://github.com/4ndersonLin/awesome-cloud-security) - A list -- `collection`
 - [Best Practices for Enterprise Organizations](https://cloud.google.com/docs/enterprise/best-practices-for-enterprise-organizations) - From Google themselves -- `collection`
+- [CIS Benchmarks for Google Cloud](https://www.cisecurity.org/benchmark/google_cloud_computing_platform) - By CIS -- `article`
 - [CloudFrontier](https://github.com/riskprofiler/CloudFrontier) - Monitor the internet attack surface of various public cloud environments. Currently supports AWS, GCP, Azure, DigitalOcean and Oracle Cloud -- `Python`
 - [CloudGraph](https://www.cloudgraph.dev/) - GraphQL API and Cloud Security Posture Management (CSPM) tool for AWS, Azure, GCP, and K8s (inventory & compliance) -- `various lang`
+- [Cloudimized](https://github.com/egnyte/cloudimized) - Google Cloud Platform (GCP) configuration scanning tool, dumps to YAML to allow alerting of changes in resources -- `Python`
 - [Cloudockit](https://www.cloudockit.com/) - Automatically generates diagrams and technical documentation, visualize and document your cloud and on-premises environments, in just a few clicks -- `not free but very good`
 - [Cloud Comparison - AWS and Azure services to Google Cloud](https://cloud.google.com/free/docs/aws-azure-gcp-service-comparison) - Cheatsheet for all three clouds -- `collection`
 - [Cloud Custodian](https://github.com/cloud-custodian/cloud-custodian) - Rules engine for managing public cloud accounts and resources via policies, by Capital One -- `various lang`
@@ -747,6 +786,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [GKE Autopilot](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview) - Think an opinionated version of GKE, somewhat similar to AWS Fargate -- `neat`
 - [GKE Demo](https://github.com/ilya-lesikov/gke-demo) - Demonstration of complete, fully-featured CI/CD and cloud automation for microservices, done with GCP/GKE -- `various lang`
 - [GKE Security Scenarios Demo](https://github.com/GoogleCloudPlatform/gke-security-scenarios-demo) - Demonstrates a series of best practices for improving the security of containerized applications deployed to Kubernetes Engine -- `various lang`
+- [GAMADV-XTD3](https://github.com/taers232c/GAMADV-XTD3) - Unofficial CLI for Google Workspace (formerly G Suite / GSuite) administrators to manage domain and user settings quickly and easily, perfect for automation -- `Python`
 - [Google Cloud Microservices Demo](https://github.com/GoogleCloudPlatform/microservices-demo) - Sample cloud-native application with 10 microservices showcasing Kubernetes / GKE, Istio, gRPC and OpenCensus -- `various lang`
 - [Google Cloud Migration Made Easy](https://cloud.google.com/blog/topics/developers-practitioners/google-cloud-migration-made-easy) - Blog entry by Google -- `article`
 - [Google Cloud Official Terraform Modules](https://github.com/GoogleCloudPlatform/cloud-foundation-toolkit/blob/master/docs/terraform.md) - Included as part of the Cloud Foundation Toolkit -- `various lang`
@@ -754,10 +794,13 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Google Cloud Samples](https://cloud.google.com/docs/samples) - Code snippits that are searchable by language and product, hot -- `collection`
 - [Little Bigtable](https://github.com/bitly/little_bigtable) - Emulator for Google Bigtable w/ persistence in sqlite3 -- `Golang`
 - [Migration to GCP - Getting Started](https://cloud.google.com/architecture/migration-to-gcp-getting-started) - By Google -- `article`
+- [Plumber](https://github.com/batchcorp/plumber) - Read and write messages to Kafka, Google Cloud PubSub, and many more -- `Golang`
 - [Preparing a Google Kubernetes Engine (GKE) Environment for Production](https://cloud.google.com/solutions/prep-kubernetes-engine-for-prod) - The best GKE summary, covers everything -- `collection`
 - [Security Best Practices Center](https://cloud.google.com/security/best-practices) - Specific, informed guidance on helping secure Google Cloud deployments and describe recommended configurations, architectures, suggested settings, and other operational advice -- `collection`
 - [Security Foundations Guide](https://cloud.google.com/blog/products/identity-security/google-cloud-security-foundations-guide) - An opinionated guide, by Google -- `article`
+- [StarWind V2V Converter / P2V Migrator](https://www.starwindsoftware.com/starwind-v2v-converter) - Excellent tool for P2C and C2C VM migrations -- `closed source`
 - [Steampipe Mod - GCP Compliance Mod](https://hub.steampipe.io/mods/turbot/gcp_compliance) - Run individual configuration, compliance and security controls or full compliance benchmarks for CIS, Forseti Security and CFT Scorecard for all your GCP projects -- `Golang`
+- [Veeam Backup and Replication Community Edition](https://www.veeam.com/virtual-machine-backup-solution-free.html) - Great for lift/shift to Google Cloud from any platform -- `closed source`
 
 ---
 
@@ -767,10 +810,12 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Avidemux](http://fixounet.free.fr/avidemux/) - Simple, all-in-one, GUI video editor and converter -- `C++` `Windows` `OS X`
 - [Blender](https://www.blender.org/) - 3D graphics software for animated films, visual effects, art, 3D printed models, and more -- `C` `Python` `Windows` `OS X`
 - [blockdiag](http://blockdiag.com/en/) - Generate simple block/sequence/activity/network diagrams from text files -- `Python pip`
+- [CloudSkew](https://www.cloudskew.com/) - Simple and easy diagrams for almost every cloud provider and major SaaS service -- `in-browser`
 - [Darktable](https://www.darktable.org/) - Photography workflow application and RAW developer, Adobe Lightroom replacement -- `C` `OS X`
 - [Diagrams](https://diagrams.mingrammer.com/) - Diagrams lets you draw the cloud system architecture in Python code, it was born for prototyping a new system architecture without any design tools, diagram as code -- `Python`
 - [draw.io](https://www.draw.io/) - Free online flow chart maker / Visio alternative, can be self-hosted -- `in-browser`
 - [drawio-desktop](https://github.com/jgraph/drawio-desktop) - draw.io in Electron -- `JavaScript`
+- [Flameshot](https://flameshot.org/) - OSS screenshot software, very configurable -- `Linux` `Windows`
 - [GlyphSearch](https://glyphsearch.com/) - Search for icons from Font Awesome, Glyphicons, IcoMoon, Ionicons, and Octicons -- `collection`
 - [GIMP (GNU Image Manipulation Program)](https://www.gimp.org/) - Open source Adobe Photoshop replacement -- `C`
 - [Graphviz](https://www.graphviz.org/) - Graph visualization and flow chart software -- `wacky license`
@@ -780,8 +825,11 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [mac2imgur](https://github.com/mileswd/mac2imgur) - Auto-upload screenshots to Imgur -- `Swift` `OS X`
 - [maim](https://github.com/naelstrof/maim) - The most powerful and flexible Linux desktop screenshot tool -- `various lang`
 - [Media Player Classic - Home Cinema (MPC-HC)](https://mpc-hc.org/) - Open source media player for Windows -- `C++` `Windows`
+- [MP4tools](https://www.mp4joiner.org/en/) - Simple join and split -- `Mac` `Windows` `Linux`
 - [OpenShot](https://openshot.org/) - Video editing software, 2.0 will support other additional platforms -- `Python` `Windows` `OS X`
+- [Open Broadcast Studio (OBS)](https://github.com/obsproject/obs-studio) - Greenscreens and recording and all kinds of fun stuff -- `various lang`
 - [Origami](https://origami.design/) - Interactive UI design prototyping without programming, by Facebook -- `various lang`
+- [Paint.NET](https://www.getpaint.net/) - A gooder version of MS Paint -- `Windows` `closed source`
 - [Pencil](https://pencil.evolus.vn/) - Open source GUI prototyping and mockup tool, supports all platforms -- `Windows` `OS X`
 - [PlantUML](http://plantuml.com/) - Easily create beautiful UML Diagrams from simple textual description -- `Java`
 - [ScreenToGif](https://www.screentogif.com/) - Record a selected area of your screen, edit and save it as a GIF or video -- `C++`
@@ -844,7 +892,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [ansible-trace](https://github.com/mhansen/ansible-trace) - Visualise where time is spent in your Ansible playbooks (what tasks and what hosts) -- `Python`
 - [Ansible Galaxy](https://galaxy.ansible.com/) - Community site for finding, reusing, and sharing Ansible content -- `various lang`
 - [ara (ARA Records Ansible)](https://github.com/ansible-community/ara) - Provides reporting by saving detailed and granular results of ansible and ansible-playbook commands -- `Python pip`
-- [asecurecloud](https://asecure.cloud/) - A free library of 400+ customizable AWS security configurations and best practices (CF, Terraform, and AWS CLI) -- `collection`
+- [AsBuiltReport](https://www.asbuiltreport.com/) - Report & dump configs from VMware, VxRail, Rubrik, Nutanix, NSX, Cisco UCS, Pure Storage, and many more -- `PowerShell`
 - [Atlantis](https://github.com/runatlantis/atlantis) - A unified workflow for collaborating on Terraform through GitHub and GitLab, by Hootsuite -- `Golang`
 - [Automatic Server Hardening](https://dev-sec.io/) - Linux hardening cookbooks/manifests/playbooks for Puppet, Chef, and Ansible -- `various lang`
 - [AWS Official Terraform Modules](https://github.com/terraform-aws-modules) - A mix of official and community supported, the official'ist repo -- `collection`
@@ -852,6 +900,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Azure Official Terraform Modules](https://github.com/orgs/Azure/repositories?q=terraform-azurerm) - By Microsoft -- `collection`
 - [Azure Resource Manager (ARM) Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools) - Language support, resource snippets, and resource auto-completion -- `various lang`
 - [Azure Resource Manager (ARM) Viewer for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=bencoleman.armview) - Graphical preview of ARM templates -- `various lang`
+- [Azure Terrafy](https://github.com/azure/aztfy) - Bring existing Azure resources under Terraform control (eg: export current Azure config as HCL), official tool from Microsoft -- `various lang`
 - [Blueprint](https://github.com/devstructure/blueprint) - Reverse engineer a server configuration -- `Python pip`
 - [Boxen](https://boxen.github.com/) - Mac / OS X configuration management -- `Ruby gem` `OS X`
 - [Cloud Custodian](https://github.com/cloud-custodian/cloud-custodian) - Rules engine for managing public cloud accounts and resources via policies, by Capital One -- `various lang`
@@ -865,6 +914,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [KICS (Keeping Infrastructure as Code Secure)](https://kics.io/) - Supports many many platforms, by Checkmarx -- `Golang`
 - [kitchen-terraform](https://github.com/newcontext-oss/kitchen-terraform) - Test Kitchen plugins for testing Terraform configurations with InSpec -- `Ruby gem`
 - [KOPS](https://github.com/kubernetes/kops) - Simple IaC system for for creating, managing, upgrading, and maintaining Kubernetes EC2-based clusters on AWS -- `Golang`
+- [Microsoft Endpoint Manager](https://www.microsoft.com/en-us/security/business/microsoft-endpoint-manager) - SCCM and InTune in one, official configuration management and more for Windows management, payware -- `closed source`
 - [Molecule](https://github.com/ansible-community/molecule) - Used for testing Ansible roles locally, supports Docker and/or Vagrant -- `Python`
 - [OpenGitOps](https://opengitops.dev/) - Set of open-source standards, best practices, and community-focused education to help organizations adopt a structured, standardized approach to implementing GitOps -- `collection`
 - [Oxidized](https://github.com/ytti/oxidized) - RANCID replacement, supports many platforms (Cisco, Brocade, Juniper, Citrix, etc) -- `Ruby gem`
@@ -999,11 +1049,12 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Octant](https://octant.dev/) - Web based representation of a Kubernetes cluster, by VMware -- `various lang`
 - [Open Cluster Management](https://github.com/open-cluster-management) - The upstream for Red Hat Advanced Cluster Management, OpenShift-centric -- `various lang`
 - [Peirates](https://github.com/inguardians/peirates) - Kubernetes penetration tool -- `Golang`
-- [Pixie](https://pixielabs.ai/) - Instant visibility by giving access to metrics, events, traces and logs without changing code (DaemonSets + eBPF) -- `Golang`
+- [Pixie](https://px.dev/) - Instant visibility by giving access to metrics, events, traces and logs without changing code, continuous profiler can help you identify hard-to-replicate production issues caused by inefficient application code (DaemonSets + eBPF) -- `Golang`
 - [Prometheus Operator](https://github.com/coreos/prometheus-operator) - Creates/configures/manages Prometheus clusters atop Kubernetes -- `Golang`
 - [pv-migrate](https://github.com/utkuozdemir/pv-migrate) - Tool for migrating PVCs -- `Golang`
 - [Reloader](https://github.com/stakater/Reloader) - Reloader can watch changes in ConfigMap and Secret and do rolling upgrades on Pods -- `Golang`
 - [Rook](https://rook.io/) - Self managing, self healing storage orchestrator for Kubernetes via an operator plugin, see also EdgeFS -- `Golang`
+- [Securing Kubernetes with Open Policy Agent](https://asankov.dev/blog/2022/04/21/securing-kubernetes-with-open-policy-agent/) - In 2022 -- `article`
 - [shell-operator](https://github.com/flant/shell-operator) - Integration layer between Kubernetes cluster events and shell scripts by treating scripts as hooks triggered by events -- `Golang`
 - [skaffold](https://github.com/GoogleCloudPlatform/skaffold) - Easy and repeatable Kubernetes development, test locally then push to a cluster, by Google -- `Golang`
 - [Sloop](https://github.com/salesforce/sloop) - Monitors Kubernetes, recording histories of events and resource state changes and providing visualizations to aid in debugging past events, by Salesforce -- `Golang`
@@ -1026,15 +1077,16 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 
 ---
 
-## Live CD Tools
+## Live CD and USB Tools
 
 - [BlackArch Linux](https://blackarch.org/) - Penetration testing Linux distro, based off of Arch Linux -- `various lang`
 - [CAINE (Computer Aided INvestigative Environment)](https://www.caine-live.net/) - Computer forensics on a live CD -- `various lang`
 - [DBAN (Darik's Boot and Nuke)](https://www.dban.org/) - Spinning disk wiper -- `various lang`
-- [Easy2Boot](http://www.easy2boot.com/) - Create multiple bootable Linux ISOs on the same USB drive -- `Windows`
+- [Easy2Boot](http://www.easy2boot.com/) - Allows you to choose from multiple bootable ISOs from a single USB drive -- `Windows`
 - [GParted Live](https://gparted.org/livecd.php) - Small, bootable ISO that contains gparted - great for resizing a non-LVM root file system -- `C`
 - [Hiren's Boot CD](https://www.hirensbootcd.org/download/) - Re-adding, updated after 6 long years -- `closed source`
 - [Kali Linux](https://www.kali.org/) - Penetration testing Linux distro -- `various lang`
+- [Medicat](https://gbatemp.net/threads/medicat-usb-a-multiboot-linux-usb-for-pc-repair.361577/) - Bootable mini Windows environment that lets you do anything from browse the filesystem of a machine that isn't booting to reset credentials and everything in between, use v18.10 if you have to -- `various lang`
 - [Network Security Toolkit (NST)](https://networksecuritytoolkit.org/nst/index.html) - Live CD that includes most tools in insecure.org's top 125 tools list -- `various lang`
 - [NirLauncher](https://launcher.nirsoft.net/) - USB live distro that contains [all of the NirSoft utilities](https://launcher.nirsoft.net/utilities_list.html) and more, essential for Windows -- `closed source` `Windows`
 - [PALADIN](https://sumuri.com/software/paladin/) - Easy to use Linux-based live CD for forensic analysis -- `various lang`
@@ -1045,6 +1097,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Tails](https://tails.boum.org/) - Aims at preserving your privacy and anonymity via Tor -- `various lang`
 - [Ultimate Boot CD (UBCD)](https://www.ultimatebootcd.com) - Tons of x86 diagnostic and stress test tools on a single CD -- `closed source` `Windows`
 - [UNetbootin](https://unetbootin.github.io/) - Create custom, bootable USB Linux CDs -- `Windows` `OS X`
+- [Ventoy](https://www.ventoy.net/en/index.html) - Create multiple bootable ISO/WIM/IMG/VHD(x)/UEFI & Secure Boot on a USB drive -- `various lang`
 - [YUMI](https://www.pendrivelinux.com/yumi-multiboot-usb-creator/) - Multiboot USB creator, Linux and -- `Windows`
 
 ---
@@ -1053,6 +1106,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 
 - [Adiscon LogAnalyzer](http://loganalyzer.adiscon.com/) - Slick web interface for syslog messages -- `PHP`
 - [Countly](https://count.ly/) - Mobile and web analytics and marketing platform -- `JavaScript`
+- [BareTail](https://www.baremetalsoft.com/baretail/) - Free real-time log monitoring tool with custom highlighting -- `Windows` `closed source`
 - [Elastalert](https://github.com/Yelp/elastalert) - Send alerts based on ElasticSearch logs (http 500 increase/spike, any custom string, etc) -- `Python`
 - [ElasticDump](https://github.com/taskrabbit/elasticsearch-dump) - Import / export tools for Elasticsearch -- `JavaScript`
 - [ElasticHQ](https://github.com/royrusso/elasticsearch-HQ) - Does not yet support ES 5.x -- `JavaScript`
@@ -1062,8 +1116,10 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [fluentbit](https://github.com/fluent/fluent-bit) - Fast and lightweight log processor, part of the fluentd family -- `C`
 - [Fluentd](https://www.fluentd.org/) - Unified logging layer, often used with Kubernetes / OpenShift / containers -- `Ruby gem`
 - [Flume](https://flume.apache.org/) - Distributed, reliable, and available service for efficiently collecting, aggregating, and moving large amounts of log data -- `Java`
+- [FullEventLogView](https://www.nirsoft.net/utils/full_event_log_view.html) - Export, read EVTX files, local, remote, and combine logs in a single view -- `Windows` `closed source`
 - [GoAccess](https://goaccess.io/) - Real-time web log analyzer and interactive viewer that runs in a terminal and/or dashboard -- `Windows` `OS X`
 - [Graylog2](https://graylog.org/) - Log capture and analysis -- `various lang`
+- [klogg](https://klogg.filimonov.dev/) - Log searcher, works very well for huge log files, multi-platform -- `various lang`
 - [lnav](https://lnav.org/) - Advanced log file viewer for the small-scale, terminal/ncurses based -- `C++`
 - [Log Courier](https://github.com/driskell/log-courier) - Enhanced fork of Logstash Forwarder -- `Ruby`
 - [Logagent](https://github.com/sematext/logagent-js) - Lightweight log shipper, like Filebeat and Logstash in one without the JVM footprint -- `JavaScript`
@@ -1142,6 +1198,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Nagios Exchange](https://exchange.nagios.org/) - Centralized repository of Nagios plugins, addons, extensions, etc -- `collection`
 - [NetXMS](https://www.netxms.org/) - Monitoring for all types of devices across the entire data center (hosts + network devices) -- `C`
 - [OpenNMS](https://www.opennms.org/) - Network monitoring, also supports configuration/asset management -- `various lang`
+- [PA-Ping](https://www.poweradmin.com/products/server-monitoring/free/ping-monitor/) -  Powerful and simple to use uptime and availability monitor based on the same software as PA Server Monitor, self-hosted, freeware -- `various lang` `closed source`
 - [pmacct](http://www.pmacct.net/) - IP and network traffic accounting / monitoring -- `C`
 - [PHP Server Monitor](http://www.phpservermonitor.org/) - Simple monitoring package that can use built-in public SMS gateways for notifications -- `PHP`
 - [PRTG](https://www.paessler.com/prtg) - Commercial version of Nagios, AD integration, many plugins, excellent price, highly recommended -- `C`
@@ -1151,6 +1208,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Shinken](http://www.shinken-monitoring.org/) - Nagios-compatible monitoring, supports high availability -- `Python`
 - [SigNoz](https://github.com/SigNoz/signoz) - OSS alternative to New Relic and DataDog -- `Golang`
 - [Statping](https://github.com/statping/statping) - THE BEST simple all in one monitoring solution, with mobile app, great for home/small networks -- `OMG`
+- [UptimeRobot](https://uptimerobot.com/) - 50 monitors with 5 minute checks for free, SaaS -- `in-browser`
 - [Uptime Kuma](https://github.com/louislam/uptime-kuma) - Self-hosted monitoring tool like Uptime Robot or Statuspage -- `various lang`
 - [Xymon](https://www.xymon.com/) - Fork of Big Brother -- `C`
 - [Zabbix](https://www.zabbix.com/) - Stores monitoring data in a DB, has agents for almost every OS, can be a virtual appliance -- `various lang`
@@ -1171,6 +1229,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [BPF Tools](https://github.com/cloudflare/bpftools) - Extended BSD Packet Filter (eBPF) and pcap toolkit, by CloudFlare -- `Python`
 - [CERT NetSA Security Suite](https://tools.netsa.cert.org/) - Network flow analysis tools -- `various lang`
 - [CrushFTP](https://www.crushftp.com/crush10wiki/Wiki.jsp?page=VFS%20Protocols) - Info on how to use CrushFTP server as a transparent FTP & SFTP proxy server -- `article`
+- [CurrPorts](https://www.nirsoft.net/utils/cports.html) - Displays the list of all currently opened TCP/IP and UDP ports on your local computer -- `Windows` `closed source`
 - [Cyberduck](https://cyberduck.io/) - GUI FTP, SFTP, WebDAV, S3 & OpenStack Swift browser for Mac and Windows -- `itsaduck`
 - [Data Plane Development Kit (DPDK)](http://dpdk.org/) - Data plane libraries and framework for fast packet processing -- `C`
 - [dog](https://github.com/ogham/dog) - DNS CLI like dig but the new hotness -- `Rust`
@@ -1191,6 +1250,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [hping3](https://linux.die.net/man/8/hping3) - Create custom TCP/IP packets, very flexible -- `built-in`
 - [Internet Outages Map](https://www.thousandeyes.com/outages/) - By Thousand Eyes -- `in-browser`
 - [joincap](https://github.com/assafmo/joincap) - Alternative to mergecap -- `Golang`
+- [LDwin](https://github.com/chall32/LDWin) - CDP and LLDP discovery GUI for Windows -- `Windows`
 - [lftp](http://lftp.yar.ru/) - Supports many protocols (FTPS, HTTPS, SFTP), scheduling, bandwidth throttling, scripting, and more - feature-rich -- `C` `C++`
 - [lldpd](https://github.com/vincentbernat/lldpd) - Daemon that can talk LLDP aka the open version of Cisco Discovery Protocol (CDP), handy for network + host mapping -- `C`
 - [Manito Networks Flow Analyzer](https://gitlab.com/thart/flowanalyzer) - ELK stack netflow analyzer -- `Python`
@@ -1202,10 +1262,11 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [NAPALM (Network Automation and Programmability Abstraction Layer with Multivendor support)](https://github.com/napalm-automation/napalm) -- Network automation and programmability abstraction layer, for both setting config and config validation -- `Python pip`
 - [ncat](https://nmap.org/ncat/) - Improved netcat, written by the Nmap team -- `C`
 - [Netconf](https://github.com/v1tal3/netconfig) - Web-based GUI for configuring API-less Cisco devices -- `Python`
+- [NetSetMan](https://www.netsetman.com/en/freeware) - Create netwoking configuration profiles and switch between them in the systray -- `Windows` `closed source`
 - [netshoot](https://hub.docker.com/r/nicolaka/netshoot) - Docker + Kubernetes network trouble-shooting swiss-army container -- `various lang`
 - [netsniff-ng](http://netsniff-ng.org/) - High performance, zero-copy networking sniffer -- `C`
 - [Networking Cheat Sheets](http://packetlife.net/library/cheat-sheets/) - Protocols, devices, ports, physical connectors, and more, by PacketLife -- `collection`
-- [NETworkManager](https://github.com/BornToBeRoot/NETworkManager) - All in one network GUI (config, troubleshooting, etc), neat! -- `C Sharp`
+- [NETworkManager](https://github.com/BornToBeRoot/NETworkManager) - All in one network GUI (config, troubleshooting, etc), neat! -- `Windows` `C Sharp`
 - [ngrep](https://linux.die.net/man/8/ngrep) - Network grep -- `C` `built-in`
 - [Nornir](https://github.com/nornir-automation/nornir) - Python automation framework without a DSL, alternative to managing network devices with Ansible -- `Python`
 - [nping](https://nmap.org/nping/) - Create custom network packets -- `C`
@@ -1213,9 +1274,13 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [OpenBMP](https://github.com/openbmp) - BGP Monitoring Protocol collector with real-time monitoring, looking glass, analytics, etc -- `various lang`
 - [OpenOnload](http://openonload.org/) - User-land network stack that requires no modifications to applications to use by intercepting calls -- `C`
 - [OpenWRT](https://openwrt.org/) - Full Linux distro for consumer-grade routers, allows for tons of non-vendor customization -- `various lang`
+- [paping](https://code.google.com/archive/p/paping/) - Ping but for TCP ports instead of ICMP -- `Windows` `Linux`
 - [PeeringDB](https://www.peeringdb.com/) - Freely available, user-maintained, database of networks, and the go-to location for interconnection data -- `collection`
 - [PFQ](http://www.pfq.io/) - Framework that allows efficient packets capture/transmission, in-kernel functional processing, and packets steering across sockets/end-points -- `C`
+- [PingPlotter](https://www.pingplotter.com/) - Powerful tool for visualizing traceroutes, makes for easy network troubleshooting, payware -- `Windows`
+- [Portmaster](https://safing.io/portmaster/) - GUI to monitor all network activity and connections as well as allows you to block connections -- `Windows` `Linux`
 - [PowerAdmin](http://www.poweradmin.org/) - Simple Web UI for PowerDNS -- `PHP`
+- [prettyping](https://denilson.sa.nom.br/prettyping/) - Terminal-based ping hotspot plotter -- `shell`
 - [Quagga](http://www.nongnu.org/quagga/) - Routing software suite, supports most routing protocols -- `C`
 - [SiLK (System for Internet-Level Knowledge)](https://tools.netsa.cert.org/silk/) - Tool suite supports the efficient collection, storage, and analysis of network flow data, enabling network security analysts to rapidly query large historical traffic data sets -- `C`
 - [snabb](https://github.com/snabbco/snabb) - Worth seeing -- `various lang`
@@ -1225,6 +1290,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [tcpreplay](http://tcpreplay.appneta.com/) - Capture, edit, and replay network traffic -- `C`
 - [tracepath](https://linux.die.net/man/8/tracepath) - Traceroute that doesn't require root -- `C`
 - [vFlow](https://github.com/VerizonDigital/vflow) - High-performance, scalable and reliable enterprise netflow collector with Kafka integration, by Verizon -- `Golang`
+- [WakeMeOnLan](https://www.nirsoft.net/utils/wake_on_lan.html) - Scans your network for computers and you can then later press a button to WoL them -- `Windows` `closed source`
 - [webterm appliance](https://www.gns3.com/marketplace/appliances/webterm) - Debian-based networking toolbox, runs in a Docker container + Firefox, by the GNS3 team -- `neat`
 - [WireShark](https://www.wireshark.org/) - The classic network analyzer -- `C`
 - [WireShark Tools](https://wiki.wireshark.org/Tools) - Superb list of network tools from the WireShark wiki -- `collection`
@@ -1238,6 +1304,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [bmon](https://github.com/tgraf/bmon/) - Console based network monitor -- `C`
 - [clumsy](https://jagt.github.io/clumsy/) - Simulate poor network conditions on Windows -- `C` `Windows`
 - [Comcast](https://github.com/tylertreat/Comcast) - Simulate crappy network connections -- `Golang` `OS X`
+- [DNSBench](https://www.grc.com/dns/benchmark.htm) - GUI DNS benchmarking tool - `Windows` `closed source`
 - [ESnet Fasterdata Knowledge Base](http://fasterdata.es.net/) - Provides proven, operationally sound methods for troubleshooting and solving performance issues -- `collection` `hpcwisdom`
 - [EtherApe](http://etherape.sourceforge.net/) - Graphical network monitor, pretty output -- `various lang`
 - [Flent](https://flent.org/) - Python wrapper to run mutliple netperf/iperf3/ping in parallel, formerly netperf-wrapper -- `Python`
@@ -1264,6 +1331,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [ss](https://linux.die.net/man/8/ss) - Socket statistics, a modern netstat -- `built-in`
 - [Stanford Linear Accelerator Center - Network Monitoring Tools](https://www.slac.stanford.edu/xorg/nmtf/nmtf-tools.html) - MASSIVE list of network monitoring tools -- `collection`
 - [tc](https://linux.die.net/man/8/tc) - Built-in Linux kernel traffic control -- `built-in`
+- [tcping.exe](https://www.elifulkerson.com/projects/tcping.php) - TCP ping for Windows -- `various lang`
 - [TCP Throughput Calculator](https://www.switch.ch/network/tools/tcp_throughput/) - See name -- `in-browser`
 - [tcpdive](https://github.com/fastos/tcpdive) - TCP performance analysis tool, implemented as SystemTap scripts -- `C`
 - [tcplife](https://www.brendangregg.com/blog/2016-11-30/linux-bcc-tcplife.html) - Watch the life of TCP connections, uses BCC -- `C`
@@ -1304,37 +1372,47 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 
 ## Package Patch and Repository Tools
 
+- [Advanced Installer](https://www.advancedinstaller.com/) - Simple, powerful and feature-rich Windows package authoring tool, supports more than MSI, payware -- `Windows`
 - [apt-dater](https://github.com/DE-IBH/apt-dater) - Simple ncurses frontend for package management via SSH, also supports yum -- `C`
 - [aptly](https://www.aptly.info/) - Swiss army knife for Debian repository management, has the ability to take snapshots for easy rollback -- `C`
 - [AutoPkg](https://autopkg.github.io/autopkg/) - Packaging and distribution for OS X, great for managing many laptops -- `Python` `OS X`
 - [CentOS Errata for Spacewalk (CEFS)](http://cefs.steve-meier.de/) - Import errata information from CentOS-announce into Spacewalk -- `useit`
 - [CentOS Repositories](https://wiki.centos.org/AdditionalResources/Repositories) - Large list of both official and unofficial CentOS software repositories -- `collection`
 - [CentOS Software Collections (SCL)](https://wiki.centos.org/AdditionalResources/Repositories/SCL) - Use multiple versions of software on a system without disturbing the system default version -- `C`
+- [CMPackager](https://github.com/asjimene/CMPackager) - Create applications in SCCM, it takes care of downloading, packaging, distributing and deploying the applications described in XML "recipe" files -- `PowerShell`
 - [Copr](https://pagure.io/copr/copr) - Automatic build system providing a package repository as its output, by Fedora -- `C`
 - [cowbuilder](https://wiki.debian.org/cowbuilder) - Package builder that uses copy-on-write (COW) to speed up the build process -- `C`
+- [Dell Command Update](https://www.dell.com/support/kbdoc/en-us/000177325/dell-command-update) - Simplifies the BIOS, firmware, driver, and application update experience for Dell commercial client hardware, easily scriptable -- `closed source`
 - [DNF aka Dandified yum ](https://fedoraproject.org/wiki/Features/DNF) - yum v4 packaging system, added to upcoming Fedora/RHEL/CentOS 8 releases -- `article`
 - [ELRepo](https://elrepo.org) - Repo that focuses on hardware related packages, supports RHEL and CentOS -- `repo`
 - [Extra Packages for Enterprise Linux (EPEL)](https://fedoraproject.org/wiki/EPEL) - Supports CentOS, RHEL, Scientific Linux, and Oracle Linux -- `repo`
 - [Extra Packaging Guidelines and Policies for EPEL](https://fedoraproject.org/wiki/EPEL/GuidelinesAndPolicies) - Packaging guidelines, great even if not creating EPEL stuff -- `readit`
 - [Fedora Packaging Guidelines](https://docs.fedoraproject.org/en-US/packaging-guidelines/) - Excellent information that can be applied to CentOS & RHEL -- `readit`
+- [fnt](https://github.com/alexmyczko/fnt) - apt for fonts, Mac and Linux -- `various lang`
 - [fpm (Fucking Package Management)](https://github.com/jordansissel/fpm) - Build packages for multiple platforms (deb, rpm, etc) with great ease and sanity -- `Ruby gem`
 - [fpm-cookery](https://github.com/bernd/fpm-cookery) - Tool for building software packages with FPM -- `Ruby gem`
 - [Habitat](https://www.habitat.sh/) - Creates platform-independent build artifacts and provides built-in deployment and management capabilities -- `Golang`
 - [Homebrew (aka brew)](https://brew.sh/) - Tons of packages for Mac -- `Ruby` `OS X`
+- [InstEd](http://www.instedit.com/download.html) - User friendly MSI editor with the most options -- `Windows` `closed source`
 - [Koji](https://fedoraproject.org/wiki/Koji) - Software that builds packages for Fedora, can be used for other stuff too, uses mock -- `C`
 - [Mock](https://github.com/rpm-software-management/mock) - Build packages in a simple chroot so you don't blow up your system -- `C`
 - [mrepo](http://dag.wiee.rs/home-made/mrepo/) - RPM repository management tool supporting ftp/http/sftp/rsync/rhn/you, formerly Yam -- `Python`
 - [Munki](https://www.munki.org/munki/) - Managed software installation for OS X, great for managing laptops -- `Python` `OS X`
+- [Orca.exe](https://docs.microsoft.com/en-us/windows/win32/msi/orca-exe) - Official MSI / Windows Installer parameter editor, edit or add any parameter -- `closed source` `Windows`
 - [OStree](https://ostree.readthedocs.io/en/latest/) - Tool for managing bootable, immutable, versioned filesystem trees (not really a package manager but...) -- `thefuture` `C`
 - [pkgr](http://crohr.me/pkgr/) - Made deb or RPM packages out of any Ruby, NodeJS, or Go app -- `Ruby`
 - [Pulp](https://www.pulpproject.org/) - Next generation repository management, a component of Red Hat Satellite 6 -- `Python`
 - [Red Hat Software Collections (SCL)](https://www.softwarecollections.org/) - Use multiple versions of software on a system without disturbing the system default version, use this to get the newest / latest versions of things -- `repo`
 - [reposync](https://linux.die.net/man/1/reposync) - Synchronize yum repositories to a local directory -- `built-in`
+- [Revo Uninstaller](https://www.revouninstaller.com/revo-uninstaller-free-download/) - The best cleaner for Windows, includes far more than just packages -- `closed source`
 - [rpm-ostree](https://github.com/projectatomic/rpm-ostree) - Hybrid image/package system with atomic upgrades and package layering -- `C` `thefuture`
 - [RPM Fusion](https://rpmfusion.org/) - Provides software that the Fedora Project or Red Hat doesn't ship -- `repo`
 - [schroot](https://linux.die.net/man/1/schroot) - Allow non-root users to create chroot environments, great for package testing -- `built-in`
+- [Scoop](https://scoop.sh/) - Windows package manager that focuses on portable apps (apps installed in user directories) -- `Windows`
 - [Spacewalk](https://www.spacewalkproject.org/) - Patch management, remote commands, and more - the upstream for Red Hat Satellite -- `various lang`
 - [Tito](https://github.com/dgoodwin/tito) - Tool for managing RPM based projects using git for their source code repository -- `Python`
+- [Uyuni](https://www.uyuni-project.org/) - Forked and up to date version of Spacewalk, uses Salt and containers -- `various lang`
+- [winget](https://docs.microsoft.com/en-us/windows/package-manager/winget/) - Client interface to the Windows Package Manager service, think apt or yum, official tool from Microsoft -- `Windows`
 - [yum-presto](https://fedoraproject.org/wiki/Features/Presto) - yum plugin that provides support for downloading package deltas -- `article`
 - [yum-security](https://linux.die.net/man/8/yum-security) - Plugin to only install security updates -- `built-in`
 
@@ -1362,6 +1440,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [pidstat](https://linux.die.net/man/1/pidstat) - vmstat type output for CPU, disk I/O, page faults, and more on a per-process basis -- `built-in`
 - [pmap](http://milianw.de/code-snippets/tracking-memory-consumption-using-pmap) - Shell scripts for tracking memory usage using "pmap" -- `shell`
 - [PowerTOP](https://01.org/powertop) - Real-time power consumption on a per-process & per-thread basis, by Intel -- `C++`
+- [Process Hacker](https://processhacker.sourceforge.io/) - Task Manager on steroids, can also be used for security and software development -- `Windows`
 - [ps_mem](https://github.com/pixelb/ps_mem) - Accurately reports core memory usage for a process -- `Python`
 - [ptop](https://github.com/black-perl/ptop) - top/ntop-like task monitor written in Python -- `Python pip`
 - [recap](https://github.com/rackerlabs/recap) - Collects info from various standard utilities (free, sar, vmstat, etc) at specified intervals, by Rackspace -- `various lang`
@@ -1385,6 +1464,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [netboot.xyz](https://netboot.xyz/) - Simple iPXE menu and installer -- `shell`
 - [Packer](https://www.packer.io/) - Automates VM creation for multiple platforms (VMware, AWS, etc) -- `Golang`
 - [Vagrant](https://www.vagrantup.com/) - Quickly spin up environments for local testing and development -- `Ruby`
+- [Vagrant Azure](https://github.com/Azure/vagrant-azure) - Official -- `Ruby`
 - [Vagrant Plugins](https://github.com/mitchellh/vagrant/wiki/Available-Vagrant-Plugins) - A list of Vagrant plugins on the official Hashicorp wiki -- `collection`
 - [Vagrant Manager](http://vagrantmanager.com/) - GUI to manage Vagrant boxes -- `Windows` `OS X`
 - [vagrant-cachier](http://fgrehm.viewdocs.io/vagrant-cachier/) - Cache BLOB downloads to reduce network usage -- `Ruby`
@@ -1483,7 +1563,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Adminer](https://www.adminer.org/) - GUI for database management in a single PHP, formerally phpMyAdmin -- `PHP`
 - [Babelfish for PostgreSQL](https://www.babelfishpg.org/) - Layer that lets PostgreSQL understand queries from applications written for Microsoft SQL Server including T-SQL and TDS, by Amazon -- `various lang`
 - [CockroachDB](https://www.cockroachlabs.com/) - Open source version of Google's Spanner storage system -- `thefuture` `Golang`
-- [DBeaver](https://dbeaver.io/) - OSS multi-platform GUI that supports almost every DB, built from Eclipse -- `Eclipse`
+- [DBeaver](https://dbeaver.io/) - OSS multi-platform GUI that supports almost every DB, can generate SQL for you -- `Eclipse`
 - [DB Browser for SQLite](http://sqlitebrowser.org/) - GUI database browser for SQLite instances -- `C++`
 - [Flyway](https://flywaydb.org/) - Version control for DB schemas, supports most DBs -- `Java`
 - [gh-ost](https://github.com/github/gh-ost) - Online schema migrations for MySQL, by GitHub -- `Golang`
@@ -1511,8 +1591,12 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Sequel Pro](https://github.com/sequelpro/sequelpro) - MySQL management GUI for Mac -- `OS X`
 - [shift](https://github.com/square/shift) - Schema migrations for MySQL, by Square -- `Ruby`
 - [SQLite](https://sqlite.org/) - Self-contained, serverless, zero-configuration, transactional SQL database engine, great for testing -- `C`
-- [sqlmap](http://sqlmap.org/) - Detect and exploit SQL injection flaws, pen testing tool -- `Python`
+- [SQLTools](https://vscode-sqltools.mteixeira.dev/) - Database management for VSCode, supports Azure, Redshift, and more -- `various lang`
 - [SQL Fiddle](http://sqlfiddle.com/) - Write and test SQL -- `in-browser`
+- [SQL Index Manager](https://github.com/sergiisyrovatchenko/SQLIndexManager) - Free GUI Tool for Index Maintenance on SQL Server and Azure -- `various lang`
+- [SQL Monitor](https://www.red-gate.com/products/dba/sql-monitor/) - Probably the best SQL Server monitoring platform, supports Azure, by Redgate, payware -- `various lang`
+- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) - Integrated environment to configure, monitor, and administer instances of SQL Server and databases including Azure -- `closed source`
+- [SQL Toolbelt](https://www.red-gate.com/products/sql-development/sql-toolbelt/) - 13 industry-standard products for SQL Server development, backup, and monitoring, payware -- `various lang`
 - [SQL Window Functions Cheat Sheet](https://learnsql.com/blog/sql-window-functions-cheat-sheet/) - Oh bby -- `collection`
 - [Vitess](https://vitess.io) - Lets you horizontally scale a mysql database at the database level and not the application level -- `various lang`
 - [wal-e](https://github.com/wal-e/wal-e) - Simple continuous archiving for PostgreSQL -- `Python`
@@ -1537,6 +1621,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [PgHero](https://github.com/ankane/pghero) - A performance dashboard for Postgres - health checks, suggested indexes, and more -- `JavaScript`
 - [PGObserver](https://zalando.github.io/PGObserver/) - Killer PostgreSQL monitor, includes dashboard -- `Python`
 - [Silly Little Oracle Benchmark 2 (SLOB2)](https://kevinclosson.net/slob/) - Stresses and benchmarks Oracle DBs, works at the RDBMS layer -- `various lang`
+- [SQL Server Profiler](https://docs.microsoft.com/en-us/sql/tools/sql-server-profiler/sql-server-profiler) - Profile SQL Server queries, also supports Azure -- `closed source`
 - [Swingbench](http://www.dominicgiles.com/swingbench.html) - Oracle load generator -- `closed source`
 - [SysBench](https://github.com/akopytov/sysbench) - Evaluates OS parameters that are important for DBs, does not require a DB to be installed -- `C`
 - [Tsung](http://tsung.erlang-projects.org/) - Distributed stress tester, also supports stress testing DBs -- `Erlang`
@@ -1568,7 +1653,9 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [blackbox](https://github.com/StackExchange/blackbox) - Safely store secrets in Git, by Stack Exchange -- `shell`
 - [Diceware](http://world.std.com/~reinhold/diceware.html) - Neat IRL passphrase generator -- `doitirl`
 - [encpass](https://github.com/plyint/encpass.sh) - Lightweight solution for using encrypted passwords in shell scripts -- `shell`
+- [gpg4win](https://www.gpg4win.org/) - For Windows, comes with an Outlook plugin -- `various lang`
 - [GPG (GNU Privacy Guard)](https://www.gnupg.org/) - The original! Store em in text files and encrypt -- `C` `pro`
+- [GPG Suite](https://gpgtools.org/) - Integrates seamlessly into Mac services such as Keychain, Mail, file encryption, signatures, and more -- `Mac` `various lang`
 - [GRC Password Generator](https://www.grc.com/passwords.htm) - Generates 63 bit passwords -- `in-browser`
 - [Kee](https://www.kee.pm/) - Auto-fill website logins using KeePass as a source, like LastPass -- `C#` `Firefox`
 - [Keybase](https://keybase.io/) - Upload your public key and find other people's public key via their social media user name(s) -- `in-browser`
@@ -1576,9 +1663,11 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Keepass2Android](https://github.com/PhilippC/keepass2android) - Compatible with KeePass 2.x -- `Android`
 - [KeePassDroid](http://www.keepassdroid.com/) - Open source version of KeePass 1.x for Android -- `Android`
 - [KeePassXC](https://keepassxc.org/) - Supports YubiKey and TOTP, forked becasue KeePassX is no longer being updated -- `C++`
-- [KeeWeb](https://github.com/keeweb/keeweb) - Cross-platform password manager compatible with KeePass -- `JavaScript`
+- [KeeWeb](https://github.com/keeweb/keeweb) - Cross-platform password manager compatible with KeePass, well made -- `JavaScript`
 - [Keywhiz](https://square.github.io/keywhiz/) - A system for distributing and managing secrets (API keys, certificates, etc), by Square -- `Java`
+- [Keystore Explorer](https://keystore-explorer.org/) - Create and navigate Java KeyStores, GUI replacement for the Java command-line utilities keytool and jarsigner -- `Java`
 - [kpcli](http://kpcli.sourceforge.net/) - Command line interface / CLI for KeePass -- `perl`
+- [kp2bw](https://github.com/jampe/kp2bw) - KeePass 2.x database to Bitwarden converter -- `Python pip`
 - [lastpass-cli](https://github.com/lastpass/lastpass-cli) - CLI for LastPass -- `C`
 - [MacPass](https://github.com/mstarke/MacPass) - A free, open-source, KeePass-compatible password manager for macOS -- `Objective-C`
 - [msktutil](https://linux.die.net/man/1/msktutil) - Keytab client for a Microsoft Active Directory environment -- `built-in`
@@ -1592,20 +1681,22 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Secrets OPerationS (SOPS)](https://github.com/mozilla/sops) - Secrets management, by Mozilla -- `Python`
 - [TeamPass](https://www.teampass.net/) - Collaborative password management using the LAMP stack -- `PHP`
 - [Vault](https://www.vaultproject.io/) - Tool for storing secrets (API keys, passwords, certs, etc) by Hashicorp -- `Golang`
+- [vaultwarden](https://github.com/dani-garcia/vaultwarden) Unofficial Bitwarden compatible server written in Rust -- `Rust`
 
 ---
 
 ## Security Tools
 
 - [Active Directory Kill Chain Attack & Defense](https://cybersecuritynews-com.cdn.ampproject.org/c/s/cybersecuritynews.com/active-directory-checklist/?amp) - Tactics, techniques, and procedures (TTPs) attackers are leveraging to compromise Active Directory, a checklist -- `collection`
+- [Active Roles](https://www.oneidentity.com/products/active-roles/) - Restore deleted objects, track change history, automation, and more for your Active Directory, supports Azure, payware -- `closed source`
 - [Advanced IP Scanner](https://www.advanced-ip-scanner.com/) - For Windows, recommended -- `closed source`
+- [AD Info](http://www.cjwdev.com/Software/ADReportingTool/Info.html) - The best Active Directory reporting tool, great for SOC 2 and similar audit -- `Windows` `closed source`
+- [AD Permissions Reporter](http://www.cjwdev.com/Software/ADPermissionsReporter/Info.html) - Windows GUI to report on security permissons on your Active Directory objects -- `Windows` `closed source`
 - [afl-fuzz (American Fuzzy Lop)](http://lcamtuf.coredump.cx/afl/) - One of the best fuzzers -- `C`
 - [AIDE (Advanced Intrusion Detection Environment)](http://aide.sourceforge.net/) - File integrity checker, alternative to Tripwire -- `various lang`
 - [Amass](https://github.com/OWASP/Amass) - Automatically obtains subdomain names in a variety of ways and uses that info to build maps of the target network, by OWASP -- `Golang`
-- [Angry IP Scanner](http://angryip.org/) - GUI network scanner, supports plugins, -- `Java` `Windows` `OS X`
 - [API Security Maturity Model](https://curity.io/resources/learn/the-api-security-maturity-model/) - By Curity -- `article`
 - [Armitage](http://www.fastandeasyhacking.com/) - GUI for Metasploit -- `Java`
-- [asecurecloud](https://asecure.cloud/) - A free library of 400+ customizable AWS security configurations and best practices (CF, Terraform, and AWS CLI) -- `collection`
 - [ATA Secure Erase](https://ata.wiki.kernel.org/index.php/ATA_Secure_Erase) - Send a signal to an ATA drive to perform a hardware-based erase, the ONLY way to wipe a SSD properly -- `article`
 - [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team) - Library of tests mapped to the MITRE ATT&CK® framework. Security teams can use Atomic Red Team to quickly, portably, and reproducibly test their environments -- `Ruby`
 - [Attack Surface Analyzer 2.0](https://github.com/microsoft/AttackSurfaceAnalyzer) - See exactly what changed post-OS install or post-software install, by Microsoft -- `Windows`
@@ -1614,10 +1705,12 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [authconv](https://github.com/authcov/authcov) - Web app authorization coverage scanning -- `JavaScript`
 - [Autopsy](https://sleuthkit.org/autopsy/) - Great for grabbing artifacts for DIFR -- `closed source`
 - [Awesome Honeypots](https://github.com/paralax/awesome-honeypots) - Curated collection of honepots and honeypot resources -- `collection`
+- [Batfish](https://www.batfish.org/) - Feed your configs in and it finds errors and guarantees the correctness of planned or current network configurations and you can run analyses like which flows are/not permitted and shadowed rules -- `Java`
 - [bettercap](https://www.bettercap.org/) - Swiss Army knife for 802.11, BlueTooth, and Ethernet networks reconnaissance and attacks -- `Golang`
 - [Brida](https://github.com/federicodotta/Brida) - Bridge between Burp Suite & Frida, lets you use and manipulate applications own methods while tampering the traffic exchanged between the applications and their back-end services/servers -- `various lang`
 - [bro](https://github.com/bro/bro) - Framework for network analysis and security monitoring -- `C++`
 - [Building Security In Maturity Model (BSIMM)](https://www.bsimm.com/) - A BSIMM assessment empowers you to analyze and benchmark your software security program against 100+ organizations across several industry verticals. It’s an objective, data-driven analysis from which to base decisions of resources, time, budget, and priorities as you seek to improve your security posture -- `article`
+- [Burp Suite Community Edition](https://portswigger.net/burp/communitydownload) - Free version of the web sec tool -- `various lang`
 - [CALDERA](https://github.com/mitre/caldera) - Automated adversary emulation system that performs post-compromise adversarial behavior within Windows Enterprise networks -- `Python`
 - [Checkov](https://www.checkov.io/) - Scans cloud infrastructure provisioned using Terraform, Cloudformation or Kubernetes and detects security and compliance misconfigurations, similar to a sub-component of Twistlock, Policy as Code -- `Golang`
 - [cherrytree](https://www.giuspen.com/cherrytree/) - Hierarchical note taking application, excellent for red team / pentest notes -- `Python`
@@ -1626,8 +1719,8 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [CIS Policy Template Guide for NIST CSF](https://www.cisecurity.org/wp-content/uploads/2020/07/NIST-CSF-Policy-Template-Guide-2020-0720-1.pdf) - For the NIST Cybersecurity Framework -- `collection`
 - [CISO Mindmap](https://rafeeqrehman.com/wp-content/uploads/2021/07/CISO_Job_MindMap_Rafeeq_Rehman_v_2021.pdf) - A collection of the categories and topics that CISOs need to be concerned about, updated annually -- `article`
 - [CloudFrontier](https://github.com/riskprofiler/CloudFrontier) - Monitor the internet attack surface of various public cloud environments. Currently supports AWS, GCP, Azure, DigitalOcean and Oracle Cloud -- `Python`
-- [CloudSploit](https://github.com/aquasecurity/cloudsploit) - Scans for risks, multi-cloud -- `various lang`
-- [CloudSploit Scans](https://github.com/cloudsploit/scans) - Scan AWS accounts for security risks -- `JavaScript`
+- [CloudSploit](https://github.com/aquasecurity/cloudsploit) - Designed to allow detection of security risks in cloud infrastructure accounts, including: Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), Oracle Cloud Infrastructure (OCI), and GitHub -- `JavaScript`
+- [CloudSploit Security Remediation Guides](https://github.com/aquasecurity/cloud-security-remediation-guides) - Best practices and checklists, covers AWS, Azure, Google Cloud / GCP, GitHub, and Oracle Cloud -- `article`
 - [Cloud Controls Matrix (CCM) v4](https://cloudsecurityalliance.org/artifacts/cloud-controls-matrix-v4/) - Cybersecurity control framework for cloud computing aligned to the CSA best practices, considered the de-facto standard for cloud security and privacy -- `article`
 - [Cloud Security Kanban](https://theartofservice.com/cloud-security-kanban) - Certify your strategy is involved in various relevant areas of compliance (GLBA, SOC II, information security models and risk assessments, IT audits, vendor management, data breach, and incident management) -- `collection`
 - [Cloud Security Orinteering](https://tldrsec.com/blog/cloud-security-orienteering/) - How to rapidly understand and secure a cloud environment -- `article`
@@ -1637,10 +1730,12 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Conftest](https://github.com/open-policy-agent/conftest) - Write tests against structured configuration data (Kuberetes, Terraform, Serverless, etc) -- `Golang`
 - [CSP Evaluator](https://csp-evaluator.withgoogle.com/) - Check if a Content Security Policy (CSP) serves as a strong mitigation against cross-site scripting attacks, by Google -- `in-browser`
 - [cuckoo](http://cuckoo.cert.ee/) - Feed in malware URL, it fires up VM, and provides a report about the actions the malware took -- `in-browser`
+- [CVE Details](https://www.cvedetails.com/) - Browsable web interface for CVE vulnerability data -- `in-browser`
 - [CyberChef](https://github.com/gchq/CyberChef) - A web app for encryption, encoding, compression and data analysis -- `in-browser` `JavaScript`
 - [Cyber Security Book of Knowledge (CyBOK)](https://www.cybok.org/knowledgebase1_1/) - Aims to bring cyber security into line with the more established sciences by distilling knowledge from major internationally-recognised experts -- `collection`
 - [Cyber Security Evaluation Tool (CSET)](https://www.cisa.gov/stopransomware/cyber-security-evaluation-tool-csetr) - Desktop application that guides asset owners and operators through a systematic process of evaluating Operational Technology and Information Technology, by the CISA -- `various lang`
 - [Cyber Exercise Playbook](https://www.mitre.org/sites/default/files/publications/pr_14-3929-cyber-exercise-playbook.pdf) - Blue team exercises, by MITRE -- `collection`
+- [CIS Controls Self Assessment Tool (CIS CSAT)](https://www.cisecurity.org/controls/cis-controls-self-assessment-tool-cis-csat) - Enables organizations to assess and track their implementation of the CIS Critical Security Controls for Versions 8 and 7.1, free -- `closed source`
 - [Cyber Security Transformation Chef](https://github.com/usdAG/cstc) - CyberChef as a Burp Suite extension -- `Java`
 - [dcfldd](http://dcfldd.sourceforge.net/) - Enhanced dd with security and forensics features -- `C`
 - [DevSecOps](https://github.com/sottlmarek/DevSecOps) - Ultimate DevSecOps tools library -- `collection`
@@ -1664,6 +1759,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Google Safe Browsing Site Status](https://transparencyreport.google.com/safe-browsing/search) - Use Google for site/URL malware analysis -- `in-browser`
 - [Grant](https://github.com/simov/grant) - OAuth proxy that supports >200 providers -- `various lang`
 - [GRR Rapid Response](https://github.com/google/grr) - Live forensics for incident response via a Python agent, dump memory, isolate host, snoop syscalls etc -- `Python`
+- [Hacking the Cloud](https://hackingthe.cloud/) - Encyclopedia of the attacks/tactics/techniques that offensive security professionals can use, covers Azure, GCP, and AWS -- `collection`
 - [hashcat](https://hashcat.net/hashcat/) - World's fastest CPU password cracker / password recovery -- `C`
 - [HIPAA Security Risk Assessment Tool](https://www.healthit.gov/topic/privacy-security-and-hipaa/security-risk-assessment-tool) - Helps healthcare providers conduct a security risk assessment, results of the assessment are displayed in a report which can be used to determine risks in policies, processes and systems and methods to mitigate weaknesses -- `Windows`
 - [HIPAA Security Rule Crosswalk to NIST Cybersecurity Framework (CSF)](https://www.hhs.gov/guidance/document/hipaa-security-rule-crosswalk-nist-cybersecurity-framework) - Title -- `article`
@@ -1672,6 +1768,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [icebreaker](https://github.com/DanMcInerney/icebreaker) - Automates internal network attacks against Active Directory to deliver you plaintext credentials -- `various lang`
 - [Information Security Cheat Sheets and Checklists](https://zeltser.com/cheat-sheets/) - An assortment of IS checklists and cheat sheets, -- `collection`
 - [IPv6 Attack Toolkit](https://github.com/vanhauser-thc/thc-ipv6) - Title -- `collection`
+- [JXplorer](http://jxplorer.org/) - Cross platform LDAP browser and editor -- `Java`
 - [Jenkins Pentesting](https://github.com/gquere/pwn_jenkins) - Title, please contribute -- `various lang`
 - [geoiplookup](https://linux.die.net/man/1/geoiplookup) - Uses the GeoIP DB and library to determine which physical country an IP or host originates in, includes PAM library -- `built-in`
 - [Hindsight](https://github.com/obsidianforensics/hindsight) - Internet history forensics for Google Chrome/Chromium -- `Python`
@@ -1682,6 +1779,9 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Joe's Sandbox (Cloud Basic)](https://www.joesandbox.com/) - Deep automated malware analysis -- `in-browser`
 - [Kali NetHunter Linux Root Toolkit (LRT)](https://github.com/offensive-security/nethunter-LRT) - Collection of bash scripts that setup and install Kali Linux NetHunter from a Linux/OSX environment onto a NetHunter supported device -- `shell`
 - [Keeping Your Domain Name Secure](https://www.gov.uk/guidance/keeping-your-domain-name-secure) - Checklist by the UK gov -- `article`
+- [KillDisk](https://www.killdisk.com/eraser.html) - Supports almost every software erasing standard (NIST, DoD, ISO, and more), payware -- `closed source`
+- [LDAP Account Manager (LAM)](https://www.ldap-account-manager.org/lamcms/) - Full featured LDAP management GUI, can manage almost anything -- `PHP`
+- [LDAP Administrator by Softerrra](https://www.ldapadministrator.com/download.htm) - Works great with Okta, payware -- `Windows`
 - [LDAP Password Hunter](https://github.com/oldboy21/LDAP-Password-Hunter) - Wraps features of getTGT.py (Impacket) and ldapsearch in order to look up for password stored in LDAP database -- `shell`
 - [LinEnum](https://github.com/rebootuser/LinEnum) - Enumerate a local Linux environment -- `shell`
 - [Lynis](https://github.com/CISOfy/lynis) - Auditing and hardening tool (CIS, PCI-DSS, etc), supports most Unix-like operating systems -- `shell`
@@ -1699,6 +1799,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [National Software Reference Library (NSRL)](https://www.nist.gov/software-quality-group/national-software-reference-library-nsrl) - Large collection of diskprints from various software and malware -- `collection`
 - [National Vulnerability Database](https://nvd.nist.gov/) - Gotta catch em all -- `collection`
 - [NetworkMiner](https://www.netresec.com/?page=NetworkMiner) - Network Forensic Analysis Tool (NFAT) for parsing PCAP files, paid version is worth it -- `open and closed source`
+- [Network Infrastructure Security Guidance](https://media.defense.gov/2022/Mar/01/2002947139/-1/-1/0/CTR_NSA_NETWORK_INFRASTRUCTURE_SECURITY_GUIDANCE_20220301.PDF) - Best practices for overall network security that will prevent cybercriminals from exploiting a network, by the NSA -- `article`
 - [Nikto2](https://cirt.net/Nikto2) - Web & app server vulnerability scanner -- `perl`
 - [NIAP Approved Protection Profiles](https://www.niap-ccevs.org/Profile/PP.cfm) - Can be used to evaluate hardware or software you are considering purchasing -- `article`
 - [NIST Cybersecurity Framework (CSF)](https://www.nist.gov/cyberframework/framework) - Use me when creating a cyber program for common terms, shared vocabulary, functions, and more -- `article`
@@ -1707,10 +1808,12 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [nmap Scripting Engine (NSE)](https://nmap.org/nsedoc/index.html) - Tons of scripts for nmap -- `various lang`
 - [oauth2_proxy](https://github.com/pusher/oauth2_proxy) - A reverse proxy that provides authentication with Google, Github or other provider -- `Golang`
 - [oclHashcat](https://hashcat.net/oclhashcat/) - World's fastest CPU + GPU password cracker / recovery software -- `C`
+- [OpenCVE](https://www.opencve.io/welcome) - Self-hosted open source CVE tracking -- `various lang`
 - [OpenSAMM (Software Assurance Maturity Model)](https://www.opensamm.org/) - Open framework to help organizations formulate and implement a strategy for software security that is tailored to the specific risks facing the organization, by OWASP -- `article`
 - [OpenSCAP](https://www.open-scap.org/page/Main_Page) - NIST Certified SCAP 1.2 toolkit -- `C`
 - [OpenVAS](http://www.openvas.org/) - Vulnerability scanner, forked from the now closed-source Nessus scanner -- `C`
 - [Open FAIR](https://www.fairinstitute.org/blog/what-is-open-fair-and-who-is-the-open-group) - Blog article about Open FAIR, the cybersecurity risk management quantitative methodology -- `article`
+- [Open-Policy Administration Layer (OPAL)](https://www.opal.ac/) - OPAL is an administration layer for Open Policy Agent (OPA), detecting changes to both policy and policy data in realtime and pushing live updates to your agents. OPAL brings open-policy up to the speed needed by live applications -- `Python`
 - [Open Policy Agent](https://www.openpolicyagent.org/) - Unifies policy enforcement in the cloud, the new standard -- `Golang`
 - [Open Security Architecture](https://www.opensecurityarchitecture.org/cms/library/patternlandscape) - A collection of security architecture patterns, invaluable -- `collection`
 - [Open Source Security Events Metadata (OSSEM)](https://ossemproject.com/intro.html) - Community-led project that focuses primarily on the documentation and standardization of security event logs from diverse data sources and operating systems -- `article`
@@ -1727,6 +1830,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [PALADIN](https://sumuri.com/software/paladin/) - Easy to use Linux-based live CD for forensic analysis -- `various lang`
 - [Penetration Testers Framework](https://github.com/trustedsec/ptf) - Script to pull down all the latest greatest tools -- `Python`
 - [pfsense](https://www.pfsense.org/) - The best firewall software, supports appliances and live CDs -- `C`
+- [PingCastle](https://www.pingcastle.com/) - Detect and fix Active Directory low hanging fruit, beautiful reports -- `Windows`
 - [preeny](https://github.com/zardus/preeny) - Some helpful preload libraries for pwning stuff -- `C`
 - [Prey](https://preyproject.com/) - Open source anti-theft software for almost all platforms -- `shell` `Java` `mobile`
 - [ProcDOT](http://www.procdot.com/) - All in one visual malware analysis and visualization, by CERN -- `closed source` `various lang`
@@ -1736,6 +1840,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Red Teaming Toolkit](https://github.com/infosecn1nja/Red-Teaming-Toolkit) - Collection of open source and commercial tools that aid in red team operations -- `collection`
 - [Regshot](https://sourceforge.net/projects/regshot/) - Snapshot and compare the Windows Registry for before/after analysis -- `C`
 - [Reproducible Builds](https://reproducible-builds.org/) - A set of software development practices that create an independently-verifiable path from source to binary code -- `article`
+- [Resource Hacker](http://www.angusj.com/resourcehacker/) - Resource editor for 32bit and 64bit Windows applications, decompiler -- `Windows` `closed source`
 - [Rootkit Hunter](http://rkhunter.sourceforge.net/) - Compares hashes of important files with known good hashes that are stored in online databases -- `perl` `shell`
 - [SalSA (Salvaging Static Analysis)](https://github.com/deptofdefense/SalSA) - Windows PE file parsing in-browser, can be locally hosted, by the DoD -- `Python`
 - [Samhain](https://www.la-samhna.de/samhain/) - HIDS, file integrity checker, rootkit detection, log file monitoring, and more -- `C`
@@ -1753,16 +1858,19 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Security Policy Templates](https://www.sans.org/information-security-policy/) - From SANS so you know it's good -- `collection`
 - [Security Stack Mappings](https://github.com/center-for-threat-informed-defense/security-stack-mappings) - Maps Azure and AWS product security controls to MITRE ATT&CK -- `collection`
 - [Security Technical Implementation Guide (STIG)](https://public.cyber.mil/stigs/) - Guides to securing almost every application, by the US military -- `collection`
-- [Selecting and Hardening Remote Access VPN Solutions](https://media.defense.gov/2021/Sep/28/2002863184/-1/-1/0/CSI_SELECTING-HARDENING-REMOTE-ACCESS-VPNS-20210928.PDF) - By the NSA -- `article`
+- [Selecting and Hardening Remote Access VPN Solutions](https://media.defense.gov/2021/Sep/28/2002863184/-1/-1/0/CSI_SELECTING-HARDENING-REMOTE-ACCESS-VPNS-20210928.PDF) - By the NSA 2021 -- `article`
 - [SELKS](https://www.stamus-networks.com/open-source/) - Debian based based IDS/IPS with ELK stack, installable or live CD -- `various lang`
 - [Server Name Indication (SNI)](https://wiki.apache.org/httpd/NameBasedSSLVHostsWithSNI) - Think vhosts for SSL (one cert for many sites), see also [ESNI](https://www.cloudflare.com/learning/ssl/what-is-encrypted-sni/) - `article`
+- [Service Credentials Manager](http://www.cjwdev.com/Software/ServiceCredMan/Info.html) - Scan any number of servers to automatically find all Windows services and scheduled tasks and see who they are running as, also great for fast large scale password changes -- `Windows`
 - [Shodan](https://www.shodan.io/) - The security search engine -- `oh yeah`
 - [SIFT Workstation](https://www.sans.org/tools/sift-workstation/) - Collection of free and open-source incident response and forensic tools designed to perform detailed digital forensic examinations in a variety of settings, by SANS -- `various lang`
+- [Signal](https://www.signal.org/) - Private communications -- `various lang`
 - [simplewall](https://github.com/henrypp/simplewall) - Simple app to configure Windows Filtering Platform (WFP), VERY powerful -- `Windows`
 - [Snort](https://www.snort.org/) - The classic network intrusion prevention system (NIPS) -- `C`
 - [SOC-CMM](https://soc-cmm.com/introduction/) - Model for measuring capability maturity in security operations centers -- `article`
 - [SPARTA](https://sparta.secforce.com/) - GUI to simplify the scanning and enumeration phases -- `Python`
 - [Spiderfoot](http://www.spiderfoot.net/) - Automate the process of gathering intelligence about a given target -- `Python`
+- [sqlmap](http://sqlmap.org/) - Detect and exploit SQL injection flaws, pen testing tool -- `Python`
 - [SubBrute](https://github.com/TheRook/subbrute) - Subdomain enumeration tool for penetration testers -- `Python`
 - [sudosh2](https://github.com/squash/sudosh2) - Records all keystrokes and output and can play back the session as just like a VCR -- `C`
 - [SuperTokens](https://supertokens.com/) - OSS alternative to Auth0, Firebase Auth and AWS Cognito -- `Java`
@@ -1780,6 +1888,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [tink](https://github.com/google/tink) - Smiple, small, secure crypto library by Google -- `C++`
 - [Tomb](https://github.com/dyne/tomb) - zsh wrapper script for cryptsetup + gpg + LUKS volumes -- `shell`
 - [Tripwire](https://github.com/Tripwire/tripwire-open-source) - File integrity checker and monitor, replacement for the now closed-source Tripwire -- `C`
+- [Tron](https://github.com/bmrf/tron) - Scan, clean, and disinfect Windows machines with a single tool, a glorified collection of batch files that automates the process, must download from the Reddit link -- `various lang`
 - [Ultimate List of SANS Cheat Sheets](https://www.sans.org/blog/the-ultimate-list-of-sans-cheat-sheets/) - Need help cutting through the cybersecurity noise? -- `collection`
 - [URLquery](https://urlquery.net/) - Free service to scan a URL for web-based malware -- `in-browser`
 - [URL Canary](https://urlcanary.com/) - Create canary URLs so you know if someone is inspecting the source code of your applications -- `in browser`
@@ -1791,6 +1900,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [VulnHub](https://www.vulnhub.com/) - ISOs and more for hands-on security practice -- `collection`
 - [w3af](https://github.com/andresriancho/w3af) - Web application attack and audit framework, OSS vun scanner -- `Python`
 - [Wazuh](https://wazuh.com/) - Host-based open source security platform -- `various lang`
+- [Wireless Network Watcher](https://www.nirsoft.net/utils/wireless_network_watcher.html) - Shows what's connected to your network in real time -- `Windows`
 - [Xplico](https://www.xplico.org/) - Useful for looking at pcaps of web sessions -- `C`
 - [Zed Attack Proxy (ZAP)](https://www.owasp.org/index.php/ZAP) - Pen testing too that focues on web applications -- `Java`
 - [ZMap](https://zmap.io/) - Scanner designed for large address spaces -- `in-browser`
@@ -1855,6 +1965,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [dev-setup](https://github.com/donnemartin/dev-setup) - Automated setup scripts for laptop tools like Sublime Text, AWS, Spark, Android dev, and more -- `collection`
 - [DevDocs](https://devdocs.io/) - Documentation browser for almost every API -- `collection`
 - [Devhints](https://devhints.io/) - Rico's dev & ops cheat sheets, nice little collection -- `collection`
+- [dotPeek](https://www.jetbrains.com/decompiler/) - Free .NET Decompiler and Assembly browser from Jetbrains -- `Windows` `closed source`
 - [drone](https://github.com/drone/drone) - CI platform built on Docker / containers, can also deploy to Kubernetes -- `Golang`
 - [dropwizard](http://www.dropwizard.io/) - Simple library for building production-ready RESTful web services -- `various lang`
 - [Fossil](https://www.fossil-scm.org) - Simple all-in-one SCM -- `various lang`
@@ -1883,6 +1994,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Pact](https://github.com/pact-foundation) - HTTP contract tests and without contract testing, the only way to ensure that applications will work correctly together is by using expensive and brittle integration tests -- `various lang`
 - [PatchELF](https://github.com/NixOS/patchelf) - Simple utility for modifying existing ELF executables and libraries -- `C`
 - [PEview](http://wjradburn.com/software/) - Easily and quickly view the structure and content of Windows EXE DDL LIB Portable Executable (PE) files -- `closed source`
+- [PoolMon](https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/poolmon) - Memory Pool Monitor, useful outside of driver development too -- `Windows` `closed source`
 - [PRoot](https://proot-me.github.io/) - chroot, mount --bind, and binfmt_misc without privilege/setup -- `C`
 - [Proxygen](https://github.com/facebook/proxygen) - Modern C++ HTTP library, by Facebook -- `C++`
 - [REST-assured](https://github.com/jayway/rest-assured) - Java DSL for testing of REST services -- `Java`
@@ -1930,6 +2042,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Dogtag Certificate System](http://pki.fedoraproject.org/wiki/PKI_Main_Page) - PKI component of FreeIPA, by Fedora -- `C`
 - [Fizz](https://github.com/facebookincubator/fizz) - C++14 implementation of the TLS-1.3 standard, by Facebook -- `C++`
 - [HSTS Preload Submission](https://hstspreload.org/) - Submit your site to be preloaded in major browsers -- `security`
+- [IIS Crypto](https://www.nartac.com/Products/IISCrypto/) - Free tool that gives administrators the ability to enable or disable protocols, ciphers, hashes and key exchange algorithms on Windows Server 2008, 2012, 2016 and 2019 -- `Windows`
 - [Let's Encrypt](https://letsencrypt.org/) - Free SSL certs from a real CA -- `in-browser`
 - [Mozilla Server Side TLS](https://wiki.mozilla.org/Security/Server_Side_TLS) - Mozilla's extensive server side TLS configuration guide -- `wiki`
 - [Mozilla SSL Configuration Generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/) - Generate SSL configs for Apache, Nginx, ELB, HAproxy and more -- `in-browser`
@@ -1941,17 +2054,17 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [SSLsplit](https://www.roe.ch/SSLsplit) - Transparent and scalable SSL/TLS interception -- `C`
 - [sslyze](https://github.com/nabla-c0d3/sslyze) - Fast and full-featured SSL scanner, written in Python -- `Python` `OS X`
 - [stunnel](https://www.stunnel.org/index.html) - Create simple TLS tunnels for existing services (eg: telnet, nc, etc) -- `C`
+- [testssl.sh](https://testssl.sh/) - CLI tool which checks a server's service on any port for the support of TLS/SSL ciphers, protocols as well as recent cryptographic flaws and more -- `various lang`
 
 ---
 
 ## Storage Tools
 
-> The storage junk drawer - see also [Backups](#backups) and [Cloud File Sync and Sharing](#cloud-file-sync-and-sharing) and [Live CD Tools](#live-cd-tools)
-
 - [BeeGFS](https://www.beegfs.com/content/) - Parallel cluster file system, worth examining -- `C++`
-- [CrystalDiskInfo](https://crystalmark.info/software/CrystalDiskInfo/index-e.html) - S.M.A.R.T. GUI tool for Windows -- `closed source` `Windows`
+- [CrystalDiskInfo](https://crystalmark.info/software/CrystalDiskInfo/index-e.html) - SMART GUI tool for Windows -- `closed source` `Windows`
 - [FlashCache](https://github.com/facebookarchive/flashcache) - General purpose, write-back block cache -- `C`
 - [fs-cache](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/ch-fscache.html) - Modern NFS client-side caching -- `built-in`
+- [GSmartControl](https://gsmartcontrol.shaduri.dev/) - GUI for smartctl so you can query and control SMART easily, multi-platform -- `various lang`
 - [Linux-IO Target (LIO)](http://linux-iscsi.org/wiki/Main_Page) - Create and share iSCSI, Fibre Channel, FC over Ethernet, and other storage targets from Linux VMs -- `built-in`
 - [lsblk](https://linux.die.net/man/8/lsblk) - List block devices -- `built-in`
 - [ncdu](https://linux.die.net/man/1/ncdu) - ncurses version of "du" -- `built-in`
@@ -1965,6 +2078,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 
 - [Bonnie++](https://linux.die.net/man/8/bonnie++) - The classic, still updated -- `built-in`
 - [Connectathon Test Suite](http://wiki.linux-nfs.org/wiki/index.php/Connectathon_test_suite) - NFS stress testing and benchmarking tools -- `various lang`
+- [CrystalDiskMark](https://crystalmark.info/en/software/crystaldiskmark/) - Simple disk benchmarking for Windows -- `Windows` `closed source`
 - [fio](https://github.com/axboe/fio) - Supports 19 different I/O engines (sync, mmap, libaio, posixaio, etc), very powerful -- `C`
 - [Fnotifystat](http://kernel.ubuntu.com/~cking/fnotifystat/) - Dumps the file system activity in a given period of time -- `C`
 - [ioping](https://github.com/koct9i/ioping) - Monitor I/O latency in real time -- `C`
@@ -1980,6 +2094,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Bitvise SSH Client](https://www.bitvise.com/ssh-client) - Feature-rich SSH & SFTP client for Windows, free for individual use -- `closed source` `Windows`
 - [Byobu](https://byobu.org) - An enhanced version of the "screen" utility -- `shell` `OS X`
 - [ChromaTerm--](https://github.com/hSaria/ChromaTerm--) - Pipe stdin to this program which highlights based on user defined regexs in .conf file -- `C`
+- [Chrome Remote Desktop](https://remotedesktop.google.com/) - Securely access your computer whenever you're away, using your phone, tablet, or another computer, supports screen sharing, official tool from Google -- `in-browser`
 - [ConnectBot](https://play.google.com/store/apps/details?id=org.connectbot&hl=en) - Open source SSH client for Android -- `Java` `Android`
 - [Guacamole](https://guacamole.apache.org/) - Clientless (in-browser) remote desktop gateway, supports VNC and RDP -- `various lang`
 - [i2cssh](https://github.com/wouterdebie/i2cssh) - csshX like ssh tool for iTerm2 -- `Ruby`
@@ -1992,6 +2107,8 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/) - The classic SSH client -- `Windows`
 - [PuTTYtray](https://puttytray.goeswhere.com/) - PuTTY in the systray + additional features -- `C`
 - [reptyr](https://github.com/nelhage/reptyr) - Reparent a running program to a new terminal -- `C`
+- [RPort](https://oss.rport.io/) - Bastion-like server that helps you to manage your remote servers without the hassle of VPNs, chained SSH connections, jump-hosts, or the use of commercial tools like TeamViewer, on-demand or perm tunnels, 2FA support, super hot -- `various lang`
+- [Remmina](https://remmina.org/) - Remote desktop client with RDP, SSH, SPICE, VNC, and X2Go protocol support, new hotness -- `various lang`
 - [screen](https://linux.die.net/man/1/screen) - Detatch and re-attach to shell sessions while they continue to run in the background -- `C`
 - [SuperPutty](https://github.com/jimradford/superputty) - Allows the PuTTY SSH client to be opened in tabs -- `Windows`
 - [tmate](https://tmate.io/) - Instant terminal sharing, a tmux fork -- `OS X`
@@ -1999,7 +2116,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [tmux Resurrect](https://github.com/tmux-plugins/tmux-resurrect) - Persists tmux environment across system restarts -- `shell`
 - [Warp](https://github.com/spolu/warp) - Securely share your terminal, like handing a co-worker your keyboard -- `Golang`
 - [WinSCP](https://winscp.net) - The well-known SCP client -- `C` `Windows`
-- [x2go](https://wiki.x2go.org/doku.php) - One of the best remote-desktop-over-SSH clients -- `Windows` `OS X`
+- [x2go](https://wiki.x2go.org/doku.php) - One of the best remote-desktop-over-SSH clients and application streaming -- `Windows` `OS X`
 - [Xshell](https://www.netsarang.com/en/xshell/) - SSH client for Windows, free for personal use -- `closed source` `Windows`
 
 ---
@@ -2012,6 +2129,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Linux Trace Toolkit - Next Generation (LLTng)](https://lttng.org/) - Linux kernel tracer and profiler, lower overhead than System Tap -- `C`
 - [lttng-analyses](https://github.com/lttng/lttng-analyses) - Official collection of LLTNG scripts and snippets -- `collection`
 - [Mastif Visualizer](https://projects.kde.org/projects/extragear/sdk/massif-visualizer) - Visualizer for the Valgrind's Mastiff utility -- `C++`
+- [magic-trace](https://magic-trace.org/) - Collects and displays high-resolution traces of what a process is doing, for x86 bare metal systems Broadwell or newer -- `various lang`
 - [OpenSnoop](http://www.brendangregg.com/blog/2014-07-25/opensnoop-for-linux.html) - Continually monitor for file opens -- `shell`
 - [OProfile](http://oprofile.sourceforge.net/) - System-wide statistical profiling tool -- `C`
 - [perf](https://perf.wiki.kernel.org/index.php/Tutorial) - User-land performance analysis tool, a sampling profiler -- `C`
@@ -2078,13 +2196,14 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Squid](http://www.squid-cache.org/) - Reverse proxy, caching server, web traffic filter, and more -- `C++`
 - [Traefik](https://github.com/containous/traefik) - Modern HTTP reverse proxy and load balancer, supports many backends -- `Golang`
 - [Unicorn Engine](https://github.com/unicorn-engine/unicorn) - CPU emulator framework (ARM, AArch64, M68K, Mips, Sparc, X86) via QEMU -- `various lang`
+- [UTM](https://mac.getutm.app/) - Full featured system emulator and virtual machine host for iOS and macOS based off QEMU -- `various lang`
 - [virt-manager](https://virt-manager.org/) - KVM / Xen / LXC GUI -- `Python`
 - [WANem (Wide Area Network Emulator)](http://wanem.sourceforge.net/) - WAN emulator -- `C`
 - [WINE](https://www.winehq.org/) - Compatibility layer for running Windows apps on POSIX-compliant OSes -- `C` `OS X`
 - [Xen](https://www.xenproject.org/) - It's a hypervisor! -- `C`
 - [XenServer](https://xenserver.org/) - Successor to Xen Cloud Platform (XCP) -- `C`
 - [xhyve](https://github.com/machyve/xhyve) - Lightweight OS X virtualization based on bhyve -- `C` `OS X`
-- [ZeroTier](https://github.com/zerotier/ZeroTierOne) - Cloud / provider-agnostic private network backplanes, network virtualization -- `C++` `all platforms`
+- [ZeroTier](https://github.com/zerotier/ZeroTierOne) - Cloud / provider-agnostic private network backplanes, network virtualization, super easy SDWAN/LAN software -- `C++` `all platforms`
 
 ---
 
@@ -2097,7 +2216,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [open-vm-tools](https://github.com/vmware/open-vm-tools) - OSS alternative to VMware Guest Tools -- `C`
 - [PowerCLI](https://my.vmware.com/web/vmware/details?downloadGroup=PCLI650R1&productId=614M) - VMware's CLI -- `closed source`
 - [pyrvtools](https://github.com/jbrt/pyrvtools) - Extract useful information from an RVTools ESX inventory file -- `Python pip`
-- [RVtools](https://www.robware.net/rvtools/) - Killer GUI for viewing information about your VMware environment -- `closed source` `.NET` `Windows`
+- [RVtools](https://www.robware.net/rvtools/) - Killer GUI for viewing information about your VMware environment, exports to Excel -- `closed source` `.NET` `Windows`
 - [RVtools Export](https://github.com/Sneddo/Powershell/blob/master/VMware/Export-RVTools.ps1) - Wrapper script to save daily snapshots of your environment using RVtools -- `PowerShell`
 - [Sexigraph](http://www.sexigraf.fr/) - Graphite-based visualization appliance for Sexilog -- `various lang`
 - [Sexilog](http://www.sexilog.fr/) - ELK stack virtual appliance designed for vSphere / VMware ESXi logs -- `various lang`
@@ -2144,6 +2263,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [strongSwan](https://www.strongswan.org/) - IPsec-based -- `C`
 - [stunnel](https://www.stunnel.org/index.html) - Create simple TLS tunnels for existing services (eg: telnet, nc, etc) -- `C`
 - [tinc](http://www.tinc-vpn.org/) - Simple, multi-platform VPN -- `C`
+- [WARP](https://github.com/fscarmen/warp) - MacOS one-click script. Add an IPv4, IPv6 or dual-stack CloudFlare WARP network interface and Socks5 proxy for VPS -- `various lang`
 - [WireGuard](https://www.wireguard.com/) - Performant in-kernel VPN server with DJB Crypto and very modern primitives -- `C`
 - [wireproxy](https://github.com/octeep/wireproxy) - A userspace wireguard client that exposes itself as a socks5 proxy or tunnels -- `Golang`    
 - [Ubuntu IKEv2 VPN Setup](https://github.com/jawj/IKEv2-setup) - Simple script that sets up a IKEv2 VPN with strongSwan on Ubuntu -- `shell`
@@ -2154,7 +2274,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 
 - [API Blueprint](https://apiblueprint.org/) - Supports bindings/plugins for many APIs -- `various lang`
 - [Caddy](https://caddyserver.com/) - Web server with automatic TLS and more -- `Golang`
-- [Fiddler](https://www.telerik.com/fiddler) - HTTP/HTTPS debugging proxy for any browser, system or platform -- `closed source`
+- [Fiddler Classic](https://www.telerik.com/fiddler) - Free version of the HTTP/HTTPS debugging proxy for any browser, system or platform -- `closed source`
 - [gRPC](https://www.grpc.io/) - High performance RPC via HTTP/2, by Google -- `C`
 - [gRPC-Gateway](https://github.com/grpc-ecosystem/grpc-gateway) - gRPC to JSON proxy generator following the gRPC HTTP spec -- `Golang`
 - [gRCPCurl](https://github.com/fullstorydev/grpcurl) - curl for gRPC servers -- `Golang`
@@ -2248,13 +2368,18 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Archive.org aka The Internet Archive aka The Wayback Machine](https://archive.org/) - Yo donate, this is beyond important -- `the biggest collection`
 - [AutoHotKey](https://autohotkey.com/) - Automate input (desktop and web forms, data entry, keybinds, etc) -- `C++` `Windows`
 - [Awesome AutoHotKey](https://github.com/ahkscript/awesome-AutoHotkey) - A collection of AutoHotKey scripts and libraries -- `various lang`
+- [Autoruns](https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns) - All-in-one tool to show everything that's configured to start at boot time -- `Windows`
 - [AutoIT](https://www.autoitscript.com/site/) - Scriptable GUI input for Windows (think AutoHotKey) but with a BASIC-like syntax -- `closed source`
 - [Backstage](https://github.com/backstage/backstage) - Unifies all your infrastructure tooling, services, and documentation with a single, consistent UI so developers can easily provision and view their resources -- `various lang`
+- [Barrier](https://github.com/debauchee/barrier) - OSS KVM software, for Mac, Windows, and Linux. Lets you share one set of peripherals across multiple machines with different OSs on the same network. Connection is encrypted -- `various lang`
+- [Belvedere](https://www.majorgeeks.com/files/details/belvedere.html) - Rriendly interface to create advanced rules to move, copy, delete, rename, or open files based on their name, extension, size, creation date, on file creation, and more, similar to Watch 4 Folder -- `Windows` `closed source`
 - [BlockTube](https://github.com/amitbl/blocktube) - Filter and block unwanted content from YouTube -- `Chrome` `Firefox`
+- [Bulk Rename Utility](https://www.bulkrenameutility.co.uk/) - GUI based, feature rich -- `Windows` `closed source`
 - [Bypass Paywalls](https://github.com/iamadamdev) - Shhh -- `Firefox` `Chrome`
 - [Bypass Paywalls](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean) - Better maintained but Chrome only -- `Chrome`
 - [c4builder](https://adrianvlupu.github.io/C4-Builder/#/?id=overview) - Lightweight nodejs cli tool for building, maintaining and sharing a software architecture project using only text, combines PlantUML C4Model, Markdown, and more -- `various lang`
 - [CheapCharts](https://www.cheapcharts.info/) - Historic price trends for digital movies and TV on iTunes, Vudu, Amazon Prime, and similar -- `collection`
+- [cherrytree](https://www.giuspen.com/cherrytree/) - Simple quick hierarchical note taking application -- `Python`
 - [Clone Wars](https://github.com/GorvGoyl/Clone-Wars) - Open-source clones of popular sites like Airbnb, Amazon, Instagram, Netflix, Tiktok, Spotify, Trello, Whatsapp, Youtube, etc -- `various lang`
 - [conserver](http://www.conserver.com/) - Virtual console server with many features (multi-user, console log history, etc) -- `C`
 - [Container Proxy](https://addons.mozilla.org/en-US/firefox/addon/container-proxy/) - Set up proxies and then assign proxy to a container. Each request comming from any tab in the container will use this proxy -- `Firefox`
@@ -2266,6 +2391,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [DevOps Conferences](http://www.gotodevops.org/) - Add and remove via PR, please contribute -- `collection`
 - [Discount for Student Dev](https://github.com/AchoArnold/discount-for-student-dev) - Programming and DevOps related discounts for .edu addresses, updated frequently, please contribute -- `collection`
 - [Downtify](https://github.com/eviabs/downtify-premium) - Open source Spotify downloader -- `various lang`
+- [EasyJob](https://github.com/akshinmustafayev/EasyJob) - Keep and execute your PowerShell and BAT scripts from one interface -- `C Sharp`
 - [Etcher](https://www.balena.io/etcher/) - SD card writing software, easy -- `various lang`
 - [Exploit Database](https://www.exploit-db.com/) - Collection of current and past exploits -- `collection`
 - [f.lux](https://justgetflux.com/) - Changes your screen from blue light to yellow light when the sun sets to tell your brain it's night time -- `closed source` `OS X` `Windows`
@@ -2288,6 +2414,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [HTTPS Everywhere](https://www.eff.org/https-everywhere) - Uses client-side tricks to force misconfigured sites to use HTTPS all the time, by the EFF (donate) -- `Firefox` `Chrome`
 - [Huginn](https://github.com/cantino/huginn) - Build agents that perform automated tasks/workflows for you online or locally, like IFTTT -- `Ruby`
 - [ICANN Domain Lookup](https://lookup.icann.org/) - Use this when searching for a domain to buy because they cannot use your searches to jack up the price -- `in-browser`
+- [InControl](https://windirstat.net/) - Control non-optional Windows upgrades -- `Windows` `closed source`
 - [inxi](https://github.com/smxi/inxi) - "a full featured system information script" (hardware info, etc) -- `shell`
 - [IPTV](https://github.com/iptv-org/iptv) - Collection of 8000+ publicly available IPTV channels from all over the world -- screw off Bundesliga -- `collection`
 - [Jellyfin](https://jellyfin.org/) - OSS alternative to Plex -- `various lang`
@@ -2297,9 +2424,13 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [L3AF](https://l3af.io/) - Complete lifecycle management of eBPF programs in the kernel, by Wal-Mart -- `various lang`
 - [Libby](https://meet.libbyapp.com/) - App for ebooks and audio books for USA public library members, from OverDrive -- `explore yours today` `Android` `iOS` `Windows 10`
 - [Library Extension](https://www.libraryextension.com/) - Browser extension that shows you which Amazon books are available free at your local libraries, please donate -- `closed source`
+- [LockHunter](https://lockhunter.com/) - Delete files blocked by something you do not know. LockHunter is useful for fighting against malware, and other programs that are blocking files without a reason -- `Windows`
+- [Magic Jelly Bean](https://www.magicaljellybean.com/) - Extract Windows & Mac product keys, saved Wi-Fi passwords and more -- `Windows` `closed source`
 - [Mail Tester](https://www.mail-tester.com/) - Test the spammyness of your e-mails -- `in-browser`
 - [maybe](https://github.com/p-e-w/maybe) - Allows a dry run of almost any Linux binary, see the files it will modify, calls made, etc -- `Python pip`
 - [Maza](https://github.com/tanrax/maza-ad-blocking) - Like Pi-hole but local and using your operating system -- `shell`
+- [Mega Collection of PowerShell Scripts](https://github.com/fleschutz/PowerShell) - 250+, Windows-centric -- `collection`
+- [Microsoft PowerToys](https://docs.microsoft.com/en-us/windows/powertoys/) - Set of utilities for power users to tune and streamline their Windows experience for greater productivity -- `Windows` `closed source`
 - [Mjolnir](https://github.com/sdegutis/mjolnir) - Automation for OS X via Lua, think AutoHotKey for Mac -- `C` `OS X`
 - [MuteMe](https://muteme.com/) - Physical mute button that shows everyone when your mic is live -- `hardware`
 - [MultiRBL](http://multirbl.valli.org/) - SMTP blackhole lookup tools -- `in-browser`
@@ -2307,6 +2438,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Network UPS Tools (NUT)](http://www.networkupstools.org/) - Manage power devices from over 100 manufacturers using a single web interface -- `C` `Windows`
 - [NoRoot Firewall](https://play.google.com/store/apps/details?id=app.greyshirts.firewall&hl=en_US) - Android app that logs connections to show overly chatty background apps and more -- `closed source`
 - [NoScript](https://noscript.net/) - JavaScript, XSS, tracker, Flash blockers and more - your condom for the Internet -- `Firefox`
+- [Obsidian](https://obsidian.md/) - Powerful knowledge base & note taking on top of a local folder of plain text Markdown files, mobile app too -- `various platforms`
 - [OISD Domain Block List](https://oisd.nl/) - The only Pi-Hole and domain blocklist you'll need -- `collection`
 - [Omni Calculator](https://www.omnicalculator.com/) - 1500+ free calculators -- `collection`
 - [oomd](https://github.com/facebookincubator/oomd) - Userspace OOM killer, highly configurable and much improved over the kernel's built in OOM killer -- `C++`
@@ -2315,14 +2447,22 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [OpenBoard](https://play.google.com/store/apps/details?id=org.dslul.openboard.inputmethod.latin) - Open source keyboard for Android that respects your privacy -- `Android`
 - [OpenHaystack](https://github.com/seemoo-lab/openhaystack) - Framework for tracking personal Bluetooth devices via Apple's massive Find My network, build your own Airtags -- `various lang`
 - [OverDrive](https://www.overdrive.com/) - Ebooks and audio books for USA public library members -- `explore yours today`
+- [parsedmarc](https://domainaware.github.io/parsedmarc/) - Python package and CLI for parsing aggregate and forensic DMARC reports, works with Elasticsearch and Kibana (or Splunk) -- `various lang`
 - [PeerTube](https://joinpeertube.org/) - P2P version of YouTube, don't let your videos get taken down, now supports live streaming -- `free as in freedom`
+- [PerigeeCopy](http://jstanley.pingerthinger.com/pscopy.html) - Fixes known annoyances with Windows Explorer copy and delete operations -- `Windows` `various lang`
 - [Pi-Hole](https://pi-hole.net/) - Ad and tracking blackhole that covers your entire network with a single device -- `hardware`
 - [PineTime](https://www.pine64.org/pinetime/) - An open source smartwatch -- `hardware`
 - [Popcorn Time](https://github.com/popcorn-official/popcorn-desktop) - Multi-platform, free software BitTorrent client that includes an integrated media player -- `various lang`
+- [Power Automate](https://docs.microsoft.com/en-us/power-automate/desktop-flows/getting-started-windows-11) - Low-code platform that enables home and business users to optimize their workflows and automate repetitive and time-consuming tasks, think AutoHotKey, official Microsoft tool, Windows 10+ -- `various lang`
 - [priceMedic](https://pricemedic.com/) - Compare procedures and services at hospitals near you, currently in beta -- `collection`
 - [Privacy Badger](https://www.eff.org/privacybadger) - The best in-browser privacy and anti-tracking tool, by the EFF (donate) -- `Chrome` `Firefox`
 - [PrivacyTools.io](https://www.privacytools.io/) - All in one collection, web site source is on GitHub -- `collection`
+- [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer) - Shows you information about which handles and DLLs processes have opened or loaded, open files -- `Windows`
+- [PsTools](https://docs.microsoft.com/en-us/sysinternals/downloads/pstools) - Magical suite of remote and local admin tools for Windows by Mark Russinovich -- `Windows`
 - [Puffer](https://puffer.stanford.edu/) - Re-transmits free over-the-air broadcast television signals received by an antenna located on the campus of Stanford University, USA geo-locked, by Stanford Platform Lab and many others -- `in-browser` `Android`
+- [Pulover's Macro Creator](https://www.macrocreator.com/) - GUI for AutoHotKey script creation, minimize coding -- `various lang`
+- [Quick Assist](https://docs.microsoft.com/en-us/windows/client-management/quick-assist) - Enables a person to share their device with another person over a remote connection, helper must have a Microsoft account, works over the Internet, builtin to Windows 10+ -- `closed source`
+- [reclaimWindows10](https://gist.github.com/alirobe/7f3b34ad89a159e6daa1) - Turns off a bunch of unnecessary Windows 10 telemetery, bloatware, & privacy things, updated frequently -- `PowerShell`
 - [Redfish](https://en.wikipedia.org/wiki/Redfish_(specification)) - An industry standard protocol providing a RESTful interface for the management of servers, storage, networking, and converged infrastructure -- `article`
 - [repl.it](https://repl.it/languages) - In-browser REPLs for a ton of languages -- `in-browser`
 - [RISC-V](https://riscv.org/) - The open source CPU that can run at >5Ghz while using 1/100th the power of a Xeon E7 -- `hardware`
@@ -2340,11 +2480,23 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Steps Recorder (aka Problem Steps Recorder)](https://support.microsoft.com/en-us/help/22878/windows-10-record-steps) - Windows 7+, user records themselves reproducing a problem, they send video to you, you playback -- `closed source`
 - [SymbolHound](http://symbolhound.com) - Search engine that doesn't ignore special characters, great for programming questions -- `try it`
 - [Temporary Containers for Firefox](https://addons.mozilla.org/en-US/firefox/addon/temporary-containers/) - Open tabs, websites, and links in automatically managed disposable containers which isolate the data websites store (cookies, storage, and more) from each other, enhancing your privacy and security while you browse -- `addon`
+- [TeraCopy](https://www.codesector.com/teracopy) - Superb tool for large file transfers / copies / migrations, has a free and paid version -- `Windows` `closed source`
+- [TextBlaze](https://blaze.today/) - Give snippets slash command shortcuts (/foo /reply /ty etc), tiny templating for blazing fast browser input, SaaS -- `in-browser`
+- [Total Commander](https://www.ghisler.com/) - File manager on steroids for Windows, feature-rich -- `shareware`
+- [Transwiz](https://www.forensit.com/move-computer.html) - The simplest way to transfer documents and settings to a new computer -- `Windows` `closed source`
 - [Twilight](https://play.google.com/store/apps/details?id=com.urbandroid.lux&hl=en) - F.lux for Android -- `closed source`
 - [Two Factor Auth (2FA)](https://2fa.directory/) - Web sites that do and don't support 2FA, organized by category, submit PRs for changes -- `collection`
 - [uBlock Origin](https://github.com/gorhill/uBlock) - Ad blocker, only use Origin, do not use another uBlock -- `Firefox` `Chrome`
 - [unPaywall](https://unpaywall.org/) - When you view a paywalled scholarly article, Unpaywall automatically checks its open database of 28 million legal, open-access articles and tells you if you can get it elsewhere for free -- `JavaScript`
+- [User Profile Wizard (profwiz)](https://www.forensit.com/domain-migration.html) - Migrate Windows user profiles to retain all settings, great for domain migrations including Azure AD, worth it -- `payware`
+- [voidtools aka Everything Indexer](https://www.voidtools.com/) - Much better than the built-in Windows file & directory search -- `Windows` `closed source`
+- [Watch 4 Folder](http://leelusoft.altervista.org/watch-4-folder.html) - Folder monitoring and automation utility that can monitor up to 4 different folders simultaneously for 12 kinds of events and react for each event with different kind of actions -- `Windows`
 - [WhosHere](https://github.com/curtbraz/whoshere) - Monitor an area for WiFi and Bluetooth probe requests to see when people (devices) come and go, with web UI and IFTTT webhook integraiton for Slack/SMS pushes -- `PHP`
+- [WinDirStat](https://windirstat.net/) - Windows disk space usage GUI, the best choice for large numbers of files or large file systems -- `Windows` `closed source`
+- [Windows Repair](https://www.tweaking.com/content/page/windows_repair_all_in_one.html) - Resets more >25 Windows components and more -- `closed source`
+- [Windows Services for Linux 2 (WSL2)](https://docs.microsoft.com/en-us/windows/wsl/about) - The official and best way to run Linux tools and full distros on Windows -- `closed source`
+- [WinMerge](https://winmerge.org/) - Data comparison and merging, includes file & directory comparison, feature rich -- `Windows` `various lang`
+- [WizTree](https://www.diskanalyzer.com/) - Disk analyzer that reads the MFT directly, blazing fast -- `Windows` `closed source`
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp) - A youtube-dl fork with additional features and fixes -- `various lang`
 
 ---
@@ -2373,6 +2525,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Built With](https://builtwith.com/) - Find out what web sites are built with -- `in-browser`
 - [Center for Humane Technology](https://www.humanetech.com/) - Non-profit working to expose the effects of persuasive technology -- `join`
 - [Chaos Engineering](https://www.oreilly.com/webops-perf/free/chaos-engineering.csp) - Building confidence in system behavior through experiments, free book by Netflix -- `book`
+- [CI/CD Goat](https://github.com/cider-security-research/cicd-goat) - Deliberately vulnerable CI/CD environment for learning, hack CI/CD pipelines, capture the flags -- `various lang`
 - [CISO Mindmap](https://rafeeqrehman.com/wp-content/uploads/2021/07/CISO_Job_MindMap_Rafeeq_Rehman_v_2021.pdf) - A collection of the categories and topics that CISOs need to be concerned about, updated annually -- `article`
 - [Cloud Native Landscape](https://landscape.cncf.io/) - A map that attempts to categorize most of the projects and product offerings in the cloud native space -- `collection`
 - [Cloud Security Orinteering](https://tldrsec.com/blog/cloud-security-orienteering/) - How to rapidly understand and secure a cloud environment -- `article`
@@ -2527,6 +2680,7 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [Team Topologies](https://danlebrero.com/2021/01/20/team-topologies-summary/) - Notes from the book -- `notes`
 - [Tech Interview Handbook](https://yangshun.github.io/tech-interview-handbook/) - SWE / dev-centric -- `tutorial`
 - [Technical Writing by Google](https://developers.google.com/tech-writing/one) - Technical writing, training by Google -- `tutorial`
+- [The Illustrated QUIC Connection](https://quic.ulfheim.net/) - Every byte explained and reproduced -- `article`
 - [The Illustrated TLS Connection](https://tls.ulfheim.net/) - Every byte of a TLS connection explained and reproduced -- `article`
 - [The Manager's Path](https://github.com/keyvanakbary/learning-notes/blob/master/books/the-managers-path.md) - Concise notes from the book -- `notes`
 - [Twelve-Factor App](https://12factor.net/) - Language-independent rules for codebase, dependencies, build/release/run, dev and prod, logs, etc for a cloud/web-centric app -- `article`
@@ -2536,3 +2690,4 @@ Includes Office 365 & O365 and Azure Active Directory & Azure AD
 - [USENIX Video Archive](https://www.youtube.com/playlist?list=UU4-GrpQBx6WCGwmwozP744Q) - 4000+ videos from LISA and related events -- `collection`
 - [Vim Adventures](https://vim-adventures.com/) - A game to learn vi / vim using your browser -- `in-browser` `tutorial`
 - [Web Security Academy](https://portswigger.net/web-security) - Free online training for the creators of Burp Suite, the free successor to the industry standard training material "Web Application Hacker's Handbook" -- `tutorial`
+- [What to Look for When Reviewing a Company's Infrastructure](https://www.marcolancini.it/2022/blog-cloud-security-infrastructure-review/) - Exceptional cloud security article and reference -- `article`
