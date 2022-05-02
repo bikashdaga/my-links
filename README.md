@@ -26,6 +26,7 @@
 - [X](#collaboration-tools) Collaboration Tools
 - [X](#containers) Containers
 - [X](#data-visualization-and-dashboards) Data Visualization and Dashboards
+- [X](#diagram-and-design-tools) Diagram and Design Tools
 - [X](#distributed-systems-tools) Distributed Systems Tools
 - [X](#enterprise-architecture) Enterprise Architecture
 - [X](#editors) Editors
@@ -235,6 +236,7 @@
 - [haproxy-autoscale](https://github.com/markcaudill/haproxy-autoscale) - Wrapper for haproxy that handles auto-scaling EC2 instances -- `Python`
 - [iamlive](https://github.com/iann0036/iamlive) - Generate a basic IAM policy from AWS client-side monitoring (CSM) -- `Golang`
 - [IAM Policy Simulator](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_testing-policies.html) - Built-in tool where you can test and troubleshoot identity-based policies, IAM permissions boundaries, Organizations service control policies (SCPs), and resource-based policies -- `in-browser`
+- [imds-filterd](https://github.com/cperciva/imds-filterd) - Pair of utilities which work together to intercept and filter requests to the EC2 Instance Metadata Service -- `C`
 - [Iris](https://github.com/doitintl/iris3) - Automatically assigns labels to Google Cloud resources -- `various lang`
 - [kappa](https://github.com/garnaat/kappa) - CLI tool that makes it easier to deploy, update, and test Lambda functions -- `Python`
 - [kinesis-scaling-tools](https://github.com/awslabs/amazon-kinesis-scaling-utils) - Tools to make Kinesis shards scale like ASGs -- `Java`
@@ -291,11 +293,13 @@
 - [AdminDroid](https://admindroid.com/) - O365 reporting, auditing, analytics, and insights, SaaS -- `closed-source`
 - [AIPAS (Azure IP Address Solution)](https://github.com/stefanstranger/AIPAS) - IPAM for Azure, used to support the deployment of Enterprise Scale Landing Zones and their VNETs -- `PowerShell`
 - [App Service Acmebot](https://github.com/shibayan/appservice-acmebot) - Application that automates the issuance and renewal of ACME SSL/TLS certificates for Azure App Services -- `C Sharp`
+- [ARMClient](https://github.com/projectkudu/ARMClient) - A simple command line tool to invoke the Azure Resource Manager API -- `C Sharp`
 - [ARM Quickstart Templates](https://azure.microsoft.com/en-us/resources/templates/) - 1000+ ARM templates, community-driven -- `collection`
 - [ARM Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools) - Language support, resource snippets, and resource auto-completion -- `various lang`
 - [ARM Viewer for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=bencoleman.armview) - Graphical preview of ARM templates -- `various lang`
 - [Audit Email Deletion in Office 365](https://github.com/admindroid-community/powershell-scripts/blob/master/Audit%20Email%20Deletion%20in%20Office%20365/AuditDeletedEmails.ps1) - Exports deleted emails audit records to CSV, requires mailbox auditing to be enabled -- `PowerShell`
 - [Audit File Deletion in Microsoft 365](https://o365reports.com/2021/12/15/find-out-who-deleted-files-from-office-365/) - Find out who deleted files from SharePoint Online, OneDrive, and Office 365 -- `PowerShell`
+- [Automatic Tuning in Azure SQL Database and Azure SQL Managed Instance](https://docs.microsoft.com/en-us/azure/azure-sql/database/automatic-tuning-overview?view=azuresql) - Built-in -- `article`
 - [Awesome Azure Architecture](https://github.com/lukemurraynz/awesome-azure-architecture) - Hot -- `collection`
 - [Awesome Azure Policy](https://github.com/globalbao/awesome-azure-policy) - Huge collection -- `collection`
 - [Awesome Cloud Security](https://github.com/4ndersonLin/awesome-cloud-security) - A list -- `collection`
@@ -308,9 +312,12 @@
 - [Azure-PlantUML](https://github.com/plantuml-stdlib/Azure-PlantUML) - PlantUML sprites, macros and stereotypes for creating PlantUML diagrams with Azure components -- `collection`
 - [Azure Active Directory Best Practices](https://duckduckgo.com/?q=azure+ad+best+practices+site%253Adocs.microsoft.com) - Covers all areas (roles, B2C, applications, and more) -- `collection`
 - [Azure AD - Attack and Defense Playbook](https://github.com/Cloud-Architekt/AzureAD-Attack-Defense) - Collection of various common attack scenarios on Azure Active Directory and how they can be mitigated or detected -- `collection`
+- [Azure AD App Gallery](https://www.microsoft.com/en-us/security/business/identity-access-management/integrated-apps-azure-ad) - Catalog of thousands of apps that make it easy to deploy and configure single sign-on (SSO) and automated user provisioning, official -- `collection`
 - [Azure AD Connect Sync](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-sync-whatis) - Takes care of all the operations that are related to synchronize identity data between your on-premises environment and Azure AD, the successor of DirSync, Azure AD Sync, and Forefront Identity Manager -- `closed source`
 - [Azure AD Password Protection for Windows Server Active Directory](https://www.microsoft.com/en-us/download/details.aspx?id=57071) - Protect all password set and reset operations in Azure and Windows Server Active Directory by ensuring they do not contain weak or leaked password strings, official tool -- `closed source`
+- [Azure AD Security Defaults](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) - Easy to enable secure configuration -- `article`
 - [Azure AD Workload Identity for Kubernetes](https://azure.github.io/azure-workload-identity/docs/) - Replacement for Azure AD Pod Identity -- `article`
+- [Azure and Microsoft 365 Scenarios](https://docs.microsoft.com/en-us/azure/architecture/solutions/microsoft-365-scenarios) - A summary of architectures and solutions that use Azure together with Microsoft 365 -- `article`
 - [Azure Arc](https://techcommunity.microsoft.com/t5/itops-talk-blog/azure-arc-for-cloud-solutions-architects/ba-p/2521928?WT.mc_id=modinfra-23500-thmaure) - Multi-cloud + on-prem control plane to centralize hybrid management, magical -- `cloud`
 - [Azure Arc Jumpstart](https://azurearcjumpstart.io/) - Learn Azure Arc in no time -- `tutorial`
 - [Azure Architecture Center](https://docs.microsoft.com/en-us/azure/architecture/) - Guidance for architecting solutions on Azure using established patterns and practices -- `collection`
@@ -324,6 +331,7 @@
 - [Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio) - Cross-platform database tool for data professionals who use on-premises and cloud data platforms on Windows, macOS, and Linux -- `closed source`
 - [Azure DevOps Labs](https://azuredevopslabs.com/) - Self-paced -- `training`
 - [Azure DevOps: Recommended Practices for Secure Pipelines](https://github.com/mpeder/azdevopssecurity) - Great collection -- `collection`
+- [Azure DevTest Labs](https://docs.microsoft.com/en-us/azure/devtest-labs/devtest-lab-overview) - Lab owners can create preconfigured VMs that have tools and software lab users need. Lab users can claim preconfigured VMs, or create and configure their own VMs and environments. Lab policies and other methods track and control lab usage and costs -- `article`
 - [Azure Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local) - Develop and test your functions on your local computer from the command prompt or terminal -- `various lang`
 - [Azure Functions Security](https://github.com/damienbod/AzureFunctionsSecurity) - Repo with a collection of resources -- `collection`
 - [Azure Functions University](https://github.com/marcduiker/azure-functions-university) - Videos and hands-on -- `tutorial`
@@ -334,6 +342,7 @@
 - [Azure Landing Zone](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) - Pre-made environments that follow best practices, quick to spin up -- `article`
 - [Azure Master Class](https://www.youtube.com/playlist?list=PLlVtbbG169nGccbp8VSpAozu3w9xSQJoY) - Hands on free training by John Savill -- `training`
 - [Azure Mission-Critical](https://github.com/Azure/Mission-Critical) - Official Microsoft project that provides a prescriptive architectural approach to building highly-reliable cloud-native applications on Microsoft Azure for mission-critical workloads -- `collection`
+- [Azure Mobile App](https://azure.microsoft.com/en-us/get-started/azure-portal/mobile-app/) - Monitor and administer Azure from your phone, Android or iOS, official tools from Microsoft -- `closed source`
 - [Azure Monitor Workbook Templates](https://github.com/microsoft/Application-Insights-Workbooks) - Templates for Azure Monitor Workbooks, official -- `collection`
 - [Azure Official Terraform Modules](https://github.com/orgs/Azure/repositories?q=terraform-azurerm) - By Microsoft -- `collection`
 - [Azure Policy Samples](https://github.com/Azure/azure-policy) - Samples of Azure Policies that can be used as reference for creating and assigning policies -- `collection`
@@ -344,7 +353,6 @@
 - [Azure Security Benchmark (ASB)](https://docs.microsoft.com/en-us/security/benchmark/azure/overview) - Azure security best practices by Microsoft, currently v3 -- `collection`
 - [Azure Security Best Practices Checklist](https://nuvento.com/blog/top-100-azure-security-best-practices-checklist/) - A list of 100 items for Azure -- `collection`
 - [Azure Security Technical Capabilities](https://docs.microsoft.com/en-us/azure/security/fundamentals/technical-capabilities) - An introduction to all important / core services of Azure -- `article`
-- [Azure Stencils for Visio](https://github.com/David-Summers/Azure-Design) - Extensive and updated -- `collection`
 - [Azure Storage Encryption for Data at Rest](https://docs.microsoft.com/en-us/azure/storage/common/storage-service-encryption) - Name -- `article`
 - [Azure Terrafy](https://github.com/azure/aztfy) - Bring existing Azure resources under Terraform control (eg: export current Azure config as HCL), official tool from Microsoft -- `various lang`
 - [Azure Tips and Tricks](https://microsoft.github.io/AzureTipsAndTricks/) - 100s of tips from community and real world scenarios, please contribute -- `collection`
@@ -378,14 +386,18 @@
 - [hibp-adfs](https://github.com/nickadam/hibp-adfs) - Gets the SHA1 hash of the submitted ADFS password and checks it against Have I Been Pwned -- `JavaScript`
 - [How to Detect Azure Active Directory Backdoors: Identity Federation](https://www.inversecos.com/2021/11/how-to-detect-azure-active-directory.html) - For Azure AD -- `article`
 - [Identity Management for Multitenant Applications in Microsoft Azure](https://github.com/mspnp/multitenant-saas-guidance) - By Microsoft -- `article`
+- [IdFix](https://microsoft.github.io/idfix/) - Provides you the ability to query, identify, and remediate the majority of object synchronization errors in your Window’s Server AD forests in preparation for deployment to Microsoft 365, official tool -- `closed source`
 - [Introduction to Azure Security](https://docs.microsoft.com/en-us/azure/security/fundamentals/overview) - Name -- `article`
 - [Key Vault Acmebot](https://github.com/shibayan/keyvault-acmebot) - Automates the issuance and renewal of ACME SSL/TLS certificates stored in Azure Key Vault -- `various lang`
 - [Mandiant Azure AD Investigator](https://github.com/mandiant/Mandiant-Azure-AD-Investigator) - Module for detecting artifacts that may be indicators of UNC2452 and other threat actor activity including domain federation, service principals, applications, and more -- `PowerShell`
 - [MicroBurst](https://github.com/NetSPI/MicroBurst) - A PowerShell toolkit for attacking Azure -- `Powershell`
+- [Microsoft 365 Admin App](https://docs.microsoft.com/en-us/microsoft-365/admin/admin-overview/admin-mobile-app) - Mobile app for iPhone and Android -- `closed source`
 - [Microsoft 365 Business Premium Partner Playbook and Readiness Series](https://cloudpartners.transform.microsoft.com/m365bp-partner-playbook) - Best practices, download the doc named "IT checklist for securing work from anywhere using Microsoft 365 Business Premium" -- `article`
 - [Microsoft 365 Scripts](https://m365scripts.com/) - Scripts for Exchange Online, Microsoft 365, Microsoft Teams, SharePoint Online, and more -- `PowerShell`
 - [Microsoft Cloud Workshop (MCW)](https://microsoftcloudworkshop.com/) - Customer-ready content to host workshops that foster cloud learning and adoption, by Microsoft -- `training`
 - [Microsoft Learn](https://docs.microsoft.com/en-us/learn/) - Includes many Azure courses -- `collection`
+- [Microsoft Portals](https://msportals.io/?search=) - Complete list of Microsoft web admin portals for Azure and M365 services -- `hottt`
+- [Microsoft Purview Compliance Manager](http://compliance.microsoft.com/) - Formerally known as Compliance Center -- `in-browser`
 - [Microsoft Secure Score](https://docs.microsoft.com/en-us/microsoft-365/security/defender/microsoft-secure-score?view=o365-worldwide) - Benchmarks that cover Azure AD, Microsoft 365 / O365, Teams, and more -- `article`
 - [Microsoft Sentinel and Microsoft 365 Defender Repository](https://github.com/Azure/Azure-Sentinel) - Contains out of the box detections, exploration queries, hunting queries, workbooks, playbooks and much more to help you get ramped up -- `collection`
 - [Microsoft Sentinel 4 SecOps](https://github.com/eshlomo1/Microsoft-Sentinel-4-SecOps) - Microsoft Sentinel content with KQL queries for exploration, hunting, and other activities -- `collection`
@@ -394,6 +406,7 @@
 - [Office365 Audit Log Collector](https://ddbnl.github.io/office365-audit-log-collector/) - Collect Office365, Azure and DLP audit logs, optionally filter them, then send them to one or more outputs such as file, PRTG, Azure Log Analytics or Graylog -- `Python`
 - [Office 365 Recommended Configuration Analyzer (ORCA)](https://github.com/cammurray/orca) - Highlights known configuration issues and improvements which can impact your experience with Microsoft Defender for Office 365 -- `PowerShell`
 - [Office 365 Reporting PowerShell Scripts](https://github.com/admindroid-community/powershell-scripts) - By the AdminDroid community-- `collection`
+- [Office 365 Reports](https://o365reports.com/) - Collection of PowerShell scripts -- `PowerShell`
 - [Plumber](https://github.com/batchcorp/plumber) - Read and write messages to Kafka, Azure Service Bus, Azure Event Hub, and many more -- `Golang`
 - [PowerShell Gallery](https://www.powershellgallery.com/) - The central repository for sharing and acquiring PowerShell code including PowerShell modules, scripts, and DSC resources -- `collection`
 - [PowerShell Koans](https://github.com/vexx32/PSKoans) - Learn the PowerShell language through Pester unit testing -- `PowerShell`
@@ -401,6 +414,7 @@
 - [PowerShell Universal](https://ironmansoftware.com/powershell-universal) - Single pane of glass for managing and delegating access to your automation environment, similar to Rundeck, payware -- `closed source`
 - [PowerZure](https://github.com/hausec/PowerZure) - PowerShell framework to assess Azure security -- `PowerShell`
 - [Promitor](https://promitor.io/) - Azure Monitor scraper which makes the metrics available through a scraping endpoint for Prometheus or push to a StatsD server -- `C Sharp`
+- [Query Performance Insight](https://duckduckgo.com/?t=ffab&q=query+performance+insight) - See long running queries and see which SQL queries are consuming the most resources, supports Azure -- `closed source`
 - [Recommended settings for Exchange Online Protection (EOP) and Microsoft Defender for Office 365](https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365?view=o365-worldwide) - Best practices -- `article`
 - [RobustCloudCommand](https://github.com/Canthv0/RobustCloudCommand) - Wrapper script that tries to ensure that a script block successfully finishes execution in O365 against a large object count -- `PowerShell`
 - [Security Stack Mappings](https://github.com/center-for-threat-informed-defense/security-stack-mappings) - Maps Azure and AWS product security controls to MITRE ATT&CK -- `collection`
@@ -417,8 +431,10 @@
 - [StarWind V2V Converter / P2V Migrator](https://www.starwindsoftware.com/starwind-v2v-converter) - Excellent tool for P2C and C2C VM migrations -- `closed source`
 - [StigRepo](https://github.com/microsoft/StigRepo) - Automate and customize configurations that are compliant with Security Technical Implementation Guides (STIGs) owned and released by the Defense Information Systems Agency (DISA) -- `PowerShell`
 - [Tenant Security (AzTS)](https://github.com/azsk/AzTS-docs) - Used to obtain visibility to cloud subscriptions and resource configuration across multiple subscriptions in an enterprise environment, official tool by Microsoft -- `various lang`
+- [Service Map](https://docs.microsoft.com/en-us/azure/azure-monitor/vm/service-map) - Automatically discovers application components on Windows and Linux systems and maps the communication between service, uses Log Analytics and the Dependency agent -- `in-browser`
 - [Steampipe Mod - Azure Compliance](https://hub.steampipe.io/mods/turbot/azure_compliance) - Run individual configuration, compliance and security controls or full CIS, HIPAA HITRUST and NIST compliance benchmarks across all your Azure subscriptions -- `Golang`
 - [StormSpotter](https://github.com/Azure/Stormspotter) - Creates an “attack graph” of the resources in an Azure subscription. It enables red teams and pentesters to visualize the attack surface and pivot opportunities within a tenant -- `Python`
+- [Understanding the Azure App Service File System](https://github.com/projectkudu/kudu/wiki/Understanding-the-Azure-App-Service-file-system) - Aritcle -- `article`
 - [Vajra](https://github.com/TROUBLE-1/Vajra) - GUI with multiple techniques for attacking and enumerating in target's Azure environment -- `various lang`
 - [Veeam Backup and Replication Community Edition](https://www.veeam.com/virtual-machine-backup-solution-free.html) - Great for lift/shift to Azure from any platform -- `closed source`
 - [VSTeam](https://github.com/MethodsAndPractices/vsteam) - Unofficial PowerShell module to automate Azure DevOps -- `PowerShell`
@@ -625,6 +641,7 @@
 - [OpenSearch Dashboards](https://github.com/opensearch-project/OpenSearch-Dashboards) - Derived from Kibana 7.10.2, for use with OpenSearch, by Amazon -- `JavaScript`
 - [pdash](https://github.com/Jahaja/psdash) - web dashboard for linux using data mainly served by psutil -- `Python pip`
 - [PNP4Nagios](https://docs.pnp4nagios.org/) - Analyzes performance data provided by plugins and stores them automatically into RRD-databases -- `PHP`
+- [Power BI Visuals Reference](https://www.sqlbi.com/ref/power-bi-visuals-reference/) - Quick visual cheat sheet of all report types -- `collection`
 - [promviz](https://github.com/nghialv/promviz) - Visualize the traffic of your clusters in realtime from Prometheus data -- `Golang`
 - [redash](https://redash.io/) - Web application that allows to easily query an existing database, share the dataset and visualize it in different ways -- `various lang`
 - [Seyren](https://github.com/scobal/seyren) - Alerting dashboard for Graphite -- `Java`
@@ -635,6 +652,35 @@
 - [vnstati](https://linux.die.net/man/1/vnstati) - Creates PNG images using vnStat data -- `built-in`
 
 ---
+
+## Diagram and Design Tools
+
+- [Archimate](https://www.archimatetool.com/) - Open source cross platform tool for enterprise architects -- `Java`
+- [AsBuiltReport](https://www.asbuiltreport.com/) - Report & dump configs from VMware, VxRail, Rubrik, Nutanix, NSX, Cisco UCS, Pure Storage, and many more -- `PowerShell`
+- [AWS Architecture Icons](https://aws.amazon.com/architecture/icons/) - List by Amazon, includes a list of diagramming and design SaaS products -- `collection`
+- [Azure Architecture Icons](https://docs.microsoft.com/en-us/azure/architecture/icons/) - Official SVG icons -- `collection`
+- [Azure Stencils for Visio](https://github.com/David-Summers/Azure-Design) - Extensive and updated -- `collection`
+- [AzViz](https://github.com/PrateekKumarSingh/AzViz) - Automatically generate Azure resource topology diagrams by just typing a PowerShell cmdlet and passing the name of one or more Azure Resource Group(s) -- `PowerShell`
+- [blockdiag](http://blockdiag.com/en/) - Generate simple block/sequence/activity/network diagrams from text files -- `Python pip`
+- [CDK-dia](https://github.com/pistazie/cdk-dia) - Automated diagrams for AWS CDK infrastructure -- `various lang`
+- [CloudCraft](https://cloudcraft.co/) - Create professional AWS architecture diagrams -- `in-browser`
+- [CloudFormation Designer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/working-with-templates-cfn-designer.html) - GUI for creating CloudFormation templates, very slick -- `in-browser`
+- [CloudMapper](https://github.com/duo-labs/cloudmapper) - Generates network diagrams of Amazon Web Services (AWS) environments and displays them via your browser, by Duo Security -- `Python`
+- [Cloudockit](https://www.cloudockit.com/) - Automatically generates diagrams and technical documentation, visualize and document your cloud and on-premises environments, in just a few clicks, SaaS -- `not free but very good`
+- [CloudSkew](https://www.cloudskew.com/) - Simple and easy diagrams for almost every cloud provider and major SaaS service, SaaS -- `in-browser`
+- [Diagrams](https://diagrams.mingrammer.com/) - Diagrams lets you draw the cloud system architecture in Python code, it was born for prototyping a new system architecture without any design tools, diagram as code -- `Python`
+- [draw.io](https://www.draw.io/) - Free online flow chart maker / Visio alternative, can be self-hosted -- `in-browser`
+- [drawio-desktop](https://github.com/jgraph/drawio-desktop) - draw.io in Electron -- `JavaScript`
+- [Microsoft 365 Architecture Templates and Icons](https://docs.microsoft.com/en-us/microsoft-365/solutions/architecture-icons-templates?view=o365-worldwide) - By Microsoft -- `collection`
+- [Google Cloud Architecture Icons](https://cloud.google.com/icons/) Includes sample diagrams, official -- `collection`
+- [Origami](https://origami.design/) - Interactive UI design prototyping without programming, by Facebook -- `various lang`
+- [Pencil](https://pencil.evolus.vn/) - Open source GUI prototyping and mockup tool, supports all platforms -- `Windows` `OS X`
+- [PlantUML](http://plantuml.com/) - Easily create beautiful UML Diagrams from simple textual description -- `Java`
+- [Serverless by Design](https://github.com/danilop/ServerlessByDesign) - In-browser or self-hosted GUI for making flow charts for serverless apps -- `various lang`
+- [Service Map](https://docs.microsoft.com/en-us/azure/azure-monitor/vm/service-map) - Automatically discovers application components on Windows and Linux systems and maps the communication between service, uses Log Analytics and the Dependency agent -- `in-browser`
+- [WWW SQL Designer](https://github.com/ondras/wwwsqldesigner/) - Designing RDBMS schemas features saving, exporting to XML, and SQL script creation, free SaaS version [here](http://ondras.zarovi.cz/sql/demo/) -- `JavaScript`
+- [yEd Graph Editor](https://www.yworks.com/en/products/yfiles/yed/) - Flowcharts and UML diagrams -- `closed source`
+
 
 ## Distributed Systems Tools
 
@@ -723,6 +769,7 @@
 
 ## Enterprise Architecture
 
+- [Archimate](https://www.archimatetool.com/) - Open source cross platform tool for enterprise architects -- `Java`
 - [archi_cloudnative](https://github.com/alberttwong/archi_cloudnative) - Cloud native architectural models using Archi, Red Hat-centric -- `collection`
 - [ArchiMate Cookbook](https://www.hosiaisluoma.fi/blog/archimate/) - Patterns and examples and a great blog by Eero Hosiaisluoma -- `collection`
 - [Business Architecture Body of Knowledge (BIZBOK)](https://www.businessarchitectureguild.org/page/BIZBOK) - Is to business architects what ITIL is to IT leaders, represents a framework of best practices and disciplines for business architects, [overview blog entry](https://www.bmc.com/blogs/bizbok-introduction/), free membership required -- `article`
@@ -806,15 +853,9 @@
 
 ## Graphics Stuff
 
-- [Archimate](https://www.archimatetool.com/) - Open source cross platform tool for enterprise architects -- `Java`
 - [Avidemux](http://fixounet.free.fr/avidemux/) - Simple, all-in-one, GUI video editor and converter -- `C++` `Windows` `OS X`
 - [Blender](https://www.blender.org/) - 3D graphics software for animated films, visual effects, art, 3D printed models, and more -- `C` `Python` `Windows` `OS X`
-- [blockdiag](http://blockdiag.com/en/) - Generate simple block/sequence/activity/network diagrams from text files -- `Python pip`
-- [CloudSkew](https://www.cloudskew.com/) - Simple and easy diagrams for almost every cloud provider and major SaaS service -- `in-browser`
 - [Darktable](https://www.darktable.org/) - Photography workflow application and RAW developer, Adobe Lightroom replacement -- `C` `OS X`
-- [Diagrams](https://diagrams.mingrammer.com/) - Diagrams lets you draw the cloud system architecture in Python code, it was born for prototyping a new system architecture without any design tools, diagram as code -- `Python`
-- [draw.io](https://www.draw.io/) - Free online flow chart maker / Visio alternative, can be self-hosted -- `in-browser`
-- [drawio-desktop](https://github.com/jgraph/drawio-desktop) - draw.io in Electron -- `JavaScript`
 - [Flameshot](https://flameshot.org/) - OSS screenshot software, very configurable -- `Linux` `Windows`
 - [GlyphSearch](https://glyphsearch.com/) - Search for icons from Font Awesome, Glyphicons, IcoMoon, Ionicons, and Octicons -- `collection`
 - [GIMP (GNU Image Manipulation Program)](https://www.gimp.org/) - Open source Adobe Photoshop replacement -- `C`
@@ -828,15 +869,11 @@
 - [MP4tools](https://www.mp4joiner.org/en/) - Simple join and split -- `Mac` `Windows` `Linux`
 - [OpenShot](https://openshot.org/) - Video editing software, 2.0 will support other additional platforms -- `Python` `Windows` `OS X`
 - [Open Broadcast Studio (OBS)](https://github.com/obsproject/obs-studio) - Greenscreens and recording and all kinds of fun stuff -- `various lang`
-- [Origami](https://origami.design/) - Interactive UI design prototyping without programming, by Facebook -- `various lang`
 - [Paint.NET](https://www.getpaint.net/) - A gooder version of MS Paint -- `Windows` `closed source`
-- [Pencil](https://pencil.evolus.vn/) - Open source GUI prototyping and mockup tool, supports all platforms -- `Windows` `OS X`
-- [PlantUML](http://plantuml.com/) - Easily create beautiful UML Diagrams from simple textual description -- `Java`
 - [ScreenToGif](https://www.screentogif.com/) - Record a selected area of your screen, edit and save it as a GIF or video -- `C++`
 - [ShareX](https://getsharex.com/) - One of the best screenshot/screencast capture and sharing tools for -- `Windows` `OS X`
 - [Skitch](https://evernote.com/skitch/) - Feature-rich screenshot editing, sharing, and annotation tool Mac/OS X -- `closed source`
 - [VLC Media Player](https://www.videolan.org/vlc/) - Media (music, video, etc) player and streaming server -- `C` `Windows` `OS X`
-- [yEd Graph Editor](https://www.yworks.com/en/products/yfiles/yed/) - Flowcharts and UML diagrams -- `closed source`
 
 ---
 
@@ -1607,6 +1644,7 @@
 
 ## RDBMS Performance Analysis Tools
 
+- [Automatic Tuning in Azure SQL Database and Azure SQL Managed Instance](https://docs.microsoft.com/en-us/azure/azure-sql/database/automatic-tuning-overview?view=azuresql) - Built-in -- `article`
 - [Awesome MySQL Performance](https://github.com/Releem/awesome-mysql-performance) - Collection -- `collection`
 - [HammerDB](http://hammerora.sourceforge.net/) - Load testing and benchmark tool, supports most DBs -- `Tcl`
 - [innotop](https://github.com/innotop/innotop) - "top" for MySQL -- NOTE: beware of exposing your password -- `perl`
@@ -1620,6 +1658,7 @@
 - [pgBadger](https://dalibo.github.io/pgbadger/) - PostgreSQL log analyzer -- `perl`
 - [PgHero](https://github.com/ankane/pghero) - A performance dashboard for Postgres - health checks, suggested indexes, and more -- `JavaScript`
 - [PGObserver](https://zalando.github.io/PGObserver/) - Killer PostgreSQL monitor, includes dashboard -- `Python`
+- [Query Performance Insight](https://duckduckgo.com/?t=ffab&q=query+performance+insight) - See long running queries and see which SQL queries are consuming the most resources, supports Azure -- `closed source`
 - [Silly Little Oracle Benchmark 2 (SLOB2)](https://kevinclosson.net/slob/) - Stresses and benchmarks Oracle DBs, works at the RDBMS layer -- `various lang`
 - [SQL Server Profiler](https://docs.microsoft.com/en-us/sql/tools/sql-server-profiler/sql-server-profiler) - Profile SQL Server queries, also supports Azure -- `closed source`
 - [Swingbench](http://www.dominicgiles.com/swingbench.html) - Oracle load generator -- `closed source`
@@ -1705,6 +1744,7 @@
 - [authconv](https://github.com/authcov/authcov) - Web app authorization coverage scanning -- `JavaScript`
 - [Autopsy](https://sleuthkit.org/autopsy/) - Great for grabbing artifacts for DIFR -- `closed source`
 - [Awesome Honeypots](https://github.com/paralax/awesome-honeypots) - Curated collection of honepots and honeypot resources -- `collection`
+- [Awesome OPA (Open Policy Agent)](https://github.com/anderseknert/awesome-opa) - Policy as code for modern infrastructures -- `collection`
 - [Batfish](https://www.batfish.org/) - Feed your configs in and it finds errors and guarantees the correctness of planned or current network configurations and you can run analyses like which flows are/not permitted and shadowed rules -- `Java`
 - [bettercap](https://www.bettercap.org/) - Swiss Army knife for 802.11, BlueTooth, and Ethernet networks reconnaissance and attacks -- `Golang`
 - [Brida](https://github.com/federicodotta/Brida) - Bridge between Burp Suite & Frida, lets you use and manipulate applications own methods while tampering the traffic exchanged between the applications and their back-end services/servers -- `various lang`
@@ -2503,6 +2543,7 @@
 
 ## Learning Resources
 
+- [90 Days of DevOps](https://github.com/MichaelCade/90DaysOfDevOps) - Excellent even for experienced engineers -- `article`
 - [A Practical Guide to (Correctly) Troubleshooting with Traceroute](https://www.nanog.org/sites/default/files/10_Roisman_Traceroute.pdf) - Presentation, really digs in -- `article`
 - [A Practical Introduction to Container Terminology](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction/) - Concise breakdown, by Red Hat -- `article`
 - [Agile Manfiesto](https://agilemanifesto.org/) - The OG, read and learn, it's easy -- `tutorial`
@@ -2591,6 +2632,7 @@
 - [Kubernetes by Example](http://kubernetesbyexample.com/) - By the RedHat OpenShift team -- `tutorial`
 - [Kubernetes Clusters for the Hobbyist](https://github.com/hobby-kube/guide) - How to securely run Kubernetes on providers that don't have ELBs, private networking, or persistent distributed storage (Hetzner Cloud, DigitalOcean or Scaleway) -- `guide`
 - [Kubernetes Failure Stories](https://k8s.af/) - Post mortems of Kubernetes outages, great way to learn -- `collection`
+- [Kubernetes Goat](https://madhuakula.com/kubernetes-goat/) - 20 scenarios designed to be an intentionally vulnerable cluster environment to learn and practice Kubernetes security -- `tutorial`
 - [Kubernetes Patterns](https://www.redhat.com/cms/managed-files/cm-oreilly-kubernetes-patterns-ebook-f19824-201910-en.pdf) - Free ebook from Red Hat and O-Reilly -- `book`
 - [Kubernetes Production Best Practices](https://learnk8s.io/production-best-practices) - Checklist -- `collection`
 - [Kubernetes the Easy Way](https://github.com/jimangel/kubernetes-the-easy-way) - Spin up a self-managed k8s cluster on DigitalOcean for cheap learning -- `various lang`
