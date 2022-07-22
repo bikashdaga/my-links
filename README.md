@@ -2774,6 +2774,7 @@
 - [Python - wtfpython](https://github.com/satwikkansal/wtfpython) - A collection of surprising Python snippets and lesser-known features -- `collection`
 - [Safari Books Online](https://www.oreilly.com/) - They took the ACM thing away but still an excellent resource -- `collection`
 - [Salesforce Trailhead](https://trailhead.salesforce.com/en) - Free official Salesforce training -- `tutorial`
+- [Scaler](https://www.scaler.com/topics/) - A curated interactive space for aspiring programmers to learn and master their coding skills.  
 - [Scrum Guide](https://www.scrumguides.org/) - Explains Scrum in a concise and straightforward way in about 10 pages, by the creators -- `article`
 - [Security Engineering 3rd Edition](https://www.cl.cam.ac.uk/~rja14/book.html) - Free concise ebook, updated 2020 -- `book`
 - [Security Engineering at Google: My Interview Study Notes](https://github.com/gracenolan/Notes/blob/master/interview-study-notes-for-security-engineering.md) - Browsable bullet points -- `collection`
